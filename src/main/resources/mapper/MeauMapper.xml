@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.msy.boot.mapper.MenuMapper">
+    <resultMap id="menuMap" type="org.msy.boot.entity.Menu">
+        <id column="mid" property="mid"></id>
+        <result column="m_name" property="mName"></result>
+        <result column="pid" property="pid"></result>
+        <result column="status" property="status"></result>
+        <result column="href" property="href"></result>
+
+        <collection property="menuList" ofType="org.msy.boot.entity.Menu" select="org.msy.boot.mapper.MenuMapper.getSubMenu"
+                    column="mid"></collection>
+    </resultMap>
+
+
+    <!-- 左侧菜单栏的初始化 -->
+    <select id="getAllMenu" resultMap="menuMap">
+        select mid,m_name,pid,status,href
+        from menu
+        where pid = 0
+          and status = 1
+          and is_deleted = 1
+    </select>
+
+    <select id="getSubMenu" resultMap="menuMap">
+        select mid,m_name,pid,status,href
+        from menu
+        where pid = #{mid}
+          and status = 1
+          and is_deleted = 1
+    </select>
+    <select id="getMenuList" parameterType="org.msy.boot.entity.Page" resultType="org.msy.boot.entity.Menu">
+        select mid,m_name,pid,status,p_name,href
+        from menu
+        where is_deleted = 1
+        <if test="t.mName != null">
+            and m_name like '%${t.mName}%'
+        </if>
+        limit #{start} , #{pageSize}
+    </select>
+
+    <select id="getCount" parameterType="org.msy.boot.entity.Menu" resultType="java.lang.Integer">
+        select count(1) from menu where is_deleted = 1
+        <if test="mName != null">
+            and m_name like '%${mName}%'
+        </if>
+    </select>
+
+    <!-- 逻辑删除菜单信息 -->
+    <update id="deleteMenu" parameterType="int">
+        update menu
+        set is_deleted = 0
+        where mid = #{mid}
+    </update>
+
+    <!-- 批量逻辑删除 -->
+    <update id="deleteBatchMenu" parameterType="string">
+        update menu set is_deleted = 0
+        where mid in (${check})
+    </update>
+    <!-- 更新操作 -->
+    <update id="updateMenu" parameterType="Menu">
+        update menu m1 , (select m_name from menu where mid = #{pid}) m2 set
+            m1.m_name = #{mName},
+            m1.pid = #{pid},
+            m1.p_name = m2.m_name,
+            m1.status = #{status},
+            m1.href = #{href}
+        where m1.mid = #{mid}
+    </update>
+
+</mapper>

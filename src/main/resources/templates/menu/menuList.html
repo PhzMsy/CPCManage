@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/font-awesome.css}" rel="stylesheet">
+    <link th:href="@{/css/plugins/iCheck/custom.css}" rel="stylesheet">
+    <link th:href="@{/css/animate.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <form th:action="@{/menu/list.html/1}" method="get">
+                <input type="text" class="text-input" placeholder="菜单名称" name="mName" th:value="${menu.mName}">
+                <input type="submit" class="btn btn-outline btn-default" value="查询">
+            </form>
+        </td>
+        <td>
+            <button id="batchDelete" onclick="batchDelete()" class="btn btn-outline btn-danger">批量删除</button>
+        </td>
+    </tr>
+</table>
+
+
+<table id="table" class="table table-bordered">
+    <thead>
+    <tr>
+        <th><input id="checkAll" type="checkbox" onclick="checkAll()"> </th>
+        <th>序号</th>
+        <th>编号</th>
+        <th>菜单名称</th>
+        <th>父级菜单</th>
+        <th>状态</th>
+        <th>访问地址</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="menu,index : ${page.data}">
+        <td><input type="checkbox" name="boxs"></td>
+        <td th:text="${index.count}"></td>
+        <td th:text="${menu.mid}"></td>
+        <td th:text="${menu.mName}"></td>
+        <td th:text="${menu.pName}"></td>
+        <td th:switch="${menu.status}">
+            <label th:case="1" style="color:green">启用</label>
+            <label th:case="0" style="color: red">禁用</label>
+        </td>
+        <td th:text="${menu.href}"></td>
+        <td>
+            <a th:href="@{/menu/menuUpdate.html?mid=} + ${menu.mid}" class="btn btn-outline btn-success">更新</a>
+            <a th:href="@{/menu/delete?mid=} + ${menu.mid}" class="btn btn-outline btn-danger">删除</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div style="text-align: right;margin-right: 20px">
+    <label class="my-font">共有<span th:text="${page.pages}"></span>页，</label>
+    <label class="my-font">共有<span th:text="${page.count}"></span>条记录，</label>
+    <label class="my-font">当前是第<span th:text="${page.currentPage}"></span>页</label>
+    <div class="btn-group">
+            <span th:if="${page.currentPage == 1}">
+                <a class="btn btn-white" href="javascript:void(0)">首页</a>
+                <a class="btn btn-white" href="javascript:void(0)">上一页</a>
+            </span>
+        <!-- 不推荐这样传递参数，更好一种方式是使用AJAX 将查询条件封装为json数据进行传输，后台采用@RequestBody注解接收 -->
+        <span th:if="${page.currentPage != 1}">
+                <a class="btn btn-info" th:href="@{'/menu/list.html/1'(mName=${menu.mName})}">首页</a>
+                <a class="btn btn-info" th:href="@{'/menu/list.html/' + ${page.currentPage-1}(mName=${menu.mName})}" >上一页</a>
+            </span>
+
+        <span th:if="${page.currentPage} != ${page.pages}">
+                <a class="btn btn-info" th:href="@{'/menu/list.html/'+${page.currentPage+1}(mName=${menu.mName})}">下一页</a>
+                <a class="btn btn-info" th:href="@{'/menu/list.html/'+${page.pages}(mName=${menu.mName})}">尾页</a>
+            </span>
+        <span th:if="${page.currentPage} == ${page.pages}">
+                <a class="btn btn-white" href="javascript:void(0)">下一页</a>
+                <a class="btn btn-white" href="javascript:void(0)">尾页</a>
+            </span>
+    </div>
+</div>
+
+<!-- 全局js -->
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+
+<!-- Peity -->
+<script th:src="@{/js/plugins/peity/jquery.peity.min.js}"></script>
+<!-- 自定义js -->
+<script th:src="@{/js/content.js}"></script>
+<!-- iCheck -->
+<script th:src="@{/js/plugins/iCheck/icheck.min.js}"></script>
+<!-- Peity -->
+<script th:src="@{/js/demo/peity-demo.js}"></script>
+
+<script>
+    function checkAll() {
+        let nn = $("#checkAll").is(":checked");
+        let namebox = $("input[name^='boxs']");
+        if(nn == true) {
+            for(i=0; i<namebox.length; i++) {
+                namebox[i].checked = true;
+            }
+        } else {
+            for(i=0; i<namebox.length; i++) {
+                namebox[i].checked = false;
+            }
+        }
+    }
+
+    function batchDelete() {
+        let check = [];  // 勾选的checkbox所在的tr中的mid
+        $("#table").find(":checkbox:checked").each(function(){
+            var td = $(this).parent().next().next();  // mid所在的td
+            check.push(td.text());   // text() : jquery 方法 -> js : innerText
+        });
+        var msg = "确认删除吗？";
+        if(confirm(msg) == true) {
+            $.ajax({
+                type:"post",
+                url:"/menu/batchDelete",
+                data:{check},
+                traditional: true,
+                datatype:"json",
+                success:function (data) {
+                    window.location.href = "/menu/list.html/1";
+                },
+                error:function () {
+                    alert("失败");
+                }
+            });
+        } else {
+            return false;
+        }
+    }
+
+    function pageSelect(currentPage) {
+        var searchForm = $("search");
+        searchForm.action("/menu/list.html/" + currentPage);
+        searchForm.submit();
+    }
+
+</script>
+</body>
+</html>
