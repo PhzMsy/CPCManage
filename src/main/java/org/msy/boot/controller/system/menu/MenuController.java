@@ -86,4 +86,9 @@ public class MenuController {
         menuService.deleteBatchMenu(check);
     }
 
+    @RequestMapping("/index_v1.html")
+    public String index_v1(){
+        return "index_v1";
+    }
+
 }

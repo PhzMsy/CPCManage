@@ -7,16 +7,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author 11612
+ * @date 2023/2/28
+ * 组织表
+ */
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-@TableName("_user")
-public class User {
-    @TableId(value = "uid",type = IdType.AUTO)
-    private Integer uid;
-    private String username;
-    private String password;
-    private String usertype;
-    private String ename;
-
+@NoArgsConstructor
+@TableName("patry")
+public class Party {
+    @TableId(value = "par_id",type = IdType.AUTO)
+    private Integer parId;
+    private String parName;
+    private String parPid;
 }

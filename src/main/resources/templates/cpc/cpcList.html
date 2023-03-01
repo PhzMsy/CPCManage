@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" th:href="@{/favicon.ico}">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/font-awesome.css}" rel="stylesheet">
+    <link th:href="@{/css/plugins/iCheck/custom.css}" rel="stylesheet">
+    <link th:href="@{/css/animate.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>首页/党员档案信息管理</h5>
+                </div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>
+                            姓名:<input type="text" name="name">
+                        </th>
+                        <th>
+                            联系电话:<input type="text" name="phone">
+                        </th>
+                        <th>
+                            户籍所在地:<input type="text" name="options">
+                        </th>
+                        <th>
+                            隶属管理支部:<input type="text" name="optiones">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            状态:<input type="text" name="nowtype">
+                        </th>
+                        <th>
+                            流出日期:<input type="date" name="datime">
+                        </th>
+                        <th>
+                            <input type="button" value="查询">
+                            <input type="button" value="重置">
+                            <input type="button" value="新增">
+                            <input type="button" value="删除">
+                            <input type="button" value="密码重置">
+                        </th>
+                    </tr>
+                    </thead>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="ibox float-e-margins">
+                <!--<div class="ibox-title">
+                    &lt;!&ndash;<h5>斑马纹效果</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="table_basic.html#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="table_basic.html#">选项1</a>
+                            </li>
+                            <li><a href="table_basic.html#">选项2</a>
+                            </li>
+                        </ul>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>&ndash;&gt;
+                </div>-->
+                <div class="ibox-content">
+
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>
+                                <input type="checkbox">
+                            </th>
+                            <th>序号</th>
+                            <th>姓名</th>
+                            <th>身份证号</th>
+                            <th>性别</th>
+                            <th>民族</th>
+                            <th>联系电话</th>
+                            <th>户籍所在地</th>
+                            <th>隶属管理支部</th>
+                            <th>当前工作状态</th>
+                            <th>流入日期</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="cpc,cpc1:${cpcList}">
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                            <td th:text="${cpc.cpcId}">
+                            </td>
+                            <td th:text="${cpc.cpc.cpcName}">
+                            </td>
+                            <td th:text="${cpc.cpc.cpcIdCard}">
+                            </td>
+                            <td th:text="${cpc.cpc.cpcSex}">
+                            </td>
+                            <td th:text="${cpc.cpc.cpcNation}">
+                            </td>
+                            <td th:text="${cpc.cpc.cpcPhone}">
+                            </td>
+                            <td th:text="${cpc.cpc.cpcOrigin}">
+                            </td>
+                            <td th:text="${cpc.cpcParid.parName}">
+                                <!--隶属支部-->
+                            </td>
+                            <td th:text="${cpc.cpc.cpcWorktype}">
+                                <!--当前工作状态-->
+                            </td>
+                            <td th:text="${cpc.iof.iofInflow}">
+                                <!--流入日期-->
+                            </td>
+                            <td>
+                                <!--操作 编辑 和 详情  ajax写-->
+                                <!--<input type="button" value="编辑" id="updateById">-->
+                                <a th:href="@{/CpcDetail/updateById(cpcId=${cpc.cpcId})}">编辑</a>
+                                <a th:href="@{/CpcDetail/queryById(cpcId=${cpc.cpcId})}">详情</a>
+                                <!--<input type="button" value="详情" id="queryById">-->
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 全局js -->
+<script th:src="@{/js/jquery.min.js}"></script>
+<script>
+</script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+
+
+
+<!-- Peity -->
+<script th:src="@{/js/plugins/peity/jquery.peity.min.js}"></script>
+
+<!-- 自定义js -->
+<script th:src="@{/js/content.js}"></script>
+
+
+<!-- iCheck -->
+<script th:src="@{/js/plugins/iCheck/icheck.min.js}"></script>
+
+<!-- Peity -->
+<script th:src="@{/js/demo/peity-demo.js}"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+    });
+</script>
+</body>
+</html>

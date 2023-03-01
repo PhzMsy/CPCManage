@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.msy.boot.mapper.CpcDetailMapper">
+
+    <select id="queryById" resultMap="org.msy.boot.mapper.CpcMapper.FourTableQuery">
+        SELECT c.*,
+               cd.cpc_cname,
+               cd.cpc_birth,
+               cd.cpc_join,
+               cd.cpc_marry,
+               cd.cpc_address,
+               cd.cpc_email,
+               cd.cpc_nowaddr,
+               cd.cpc_jobtime,
+               cd.cpc_strengt,
+               cd.cpc_dwadvise,
+               cd.cpc_homeadvise,
+               cd.cpc_jnadvise,
+               cd.cpc_otheradvise,
+               cd.cpc_require,
+               cd.cpc_comid,
+               cd.cpc_parid
+        from cpc c
+                 join cpc_detail cd on c.cpc_id = cd.cpc_id where c.cpc_id = #{cpc_id}
+    </select>
+
+    <select id="queryByComp" resultType="company">
+        select *
+        from company where com_id = #{cpc_id}
+    </select>
+
+    <select id="queryByParty" resultType="party">
+        select * from party where par_id  = #{cpc_id}
+    </select>
+    <select id="queryByIof" resultType="iof">
+        select * from iof where iof_id = #{cpc_id}
+    </select>
+    <select id="queryByEdu" resultType="edu">
+        select * from edu where edu_id = #{cpc_id}
+    </select>
+    <select id="queryByFamily" resultType="family">
+        select * from family where fa_cpcid = #{cpc_id}
+    </select>
+</mapper>

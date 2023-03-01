@@ -26,4 +26,8 @@ spring:
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #全局启动或金庸延迟加载.当禁用时所有关联对象都会及时加载
+    lazy-loading-enabled: true
+    #为false时 所有关联对象都会按需求加载
+    aggressive-lazy-loading: false
   type-aliases-package: org.msy.boot.entity

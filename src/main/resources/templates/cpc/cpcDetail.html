@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link rel="shortcut icon" th:href="@{favicon.ico}">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/font-awesome.css}" rel="stylesheet">
+    <link th:href="@{/css/animate.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper wrapper-content">
+    <div class="row animated fadeInRight">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h3>首页/流动党员档案信息管理</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>边框</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="table_basic.html#">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-user">
+                                        <li><a href="table_basic.html#">选项1</a>
+                                        </li>
+                                        <li><a href="table_basic.html#">选项2</a>
+                                        </li>
+                                    </ul>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content">
+
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td colspan="2" rowspan="3">图片占位</td>
+                                        <td>姓名:</td>
+                                        <td th:text="${query.cpc.cpcName}"></td>
+                                        <td>曾用名:</td>
+                                        <td th:text="${query.cpcCname}"></td>
+                                        <td>籍贯:</td>
+                                        <td th:text="${query.cpc.cpcOrigin}"></td>
+                                        <td>性别:</td>
+                                        <td th:text="${query.cpc.cpcSex}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>民族:</td>
+                                        <td th:text="${query.cpc.cpcNation}"></td>
+                                        <td>出生年月:</td>
+                                        <td th:text="${query.cpcBirth}"></td>
+                                        <td>入党时间:</td>
+                                        <td th:text="${query.cpcJoin}"></td>
+                                        <td>婚姻状况;</td>
+                                        <td th:text="${query.cpcMarry}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>身份证号</td>
+                                        <td colspan="3" th:text="${query.cpc.cpcIdCard}"></td>
+                                        <td>联系方式</td>
+                                        <td colspan="3" th:text="${query.cpc.cpcPhone}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>家庭住址:</td>
+                                        <td colspan="4" th:text="${query.cpcAddress}"></td>
+                                        <td>邮箱:</td>
+                                        <td colspan="3" th:text="${query.cpcEmail}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>现居住地/br(小区/学校):</td>
+                                        <td colspan="4" th:text="${query.cpcNowaddr}"></td>
+                                        <td>到济工作/生活/br时间:</td>
+                                        <td colspan="3" th:text="${query.cpcJobtime}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>组织关系所在党支部</td>
+                                        <td  colspan="2" th:text="${query.cpcParid.parName}"></td>
+                                        <td>流动党员隶属管<br>理支部:</td>
+                                        <td colspan="2" th:text="${query.cpcParid.parName}"></td>
+                                        <td>特长:</td>
+                                        <td colspan="2" th:text="${query.cpcStrengt}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="2">学历信息</td>
+                                        <td>学历(全日制):</td>
+                                        <td th:text="${query.edu.eduEdu}"></td>
+                                        <td>学位:</td>
+                                        <td th:text="${query.edu.eduDegree}"></td>
+                                        <td>专业:</td>
+                                        <td th:text="${query.edu.eduMajor}"></td>
+                                        <td>毕业院校:</td>
+                                        <td th:text="${query.edu.eduSchool}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>入学时间</td>
+                                        <td colspan="3" th:text="${query.edu.eduStrat}"></td>
+                                        <td>毕业时间</td>
+                                        <td colspan="2" th:text="${query.edu.eduEnd}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td th:rowspan="${query.familyList.size()}+1">家庭主要成员<br>(仅填写配偶及子女)</td>
+                                        <td>关系</td>
+                                        <td>姓名</td>
+                                        <td>出生年月</td>
+                                        <td colspan="2">工作单位</td>
+                                        <td>职务</td>
+                                        <td>联系电话</td>
+                                        <td>备注</td>
+                                    </tr>
+                                    <tr th:each="fm:${query.familyList}">
+                                        <td th:text="${fm.faRelation}">
+                                        <td th:text="${fm.faName}">
+                                        <td th:text="${fm.faBirth}">
+                                        <td colspan="2" th:text="${fm.faJob}">
+                                        <td th:text="${fm.faPost}">
+                                        <td th:text="${fm.faPhone}">
+                                        <td th:text="${fm.faOther}">
+                                    </tr>
+                                    <tr>
+                                        <td>当前工作状态:</td>
+                                        <td colspan="3" th:text="${query.cpc.cpcWorktype}"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td rowspan="3" style="text-align:center;">公司信息
+                                        </td>
+                                        <td>公司名称:</td>
+                                        <td colspan="2" th:text="${query.cpcComid.comName}"></td>
+                                        <td>公司注册日期:</td>
+                                        <td th:text="${query.cpcComid.comDate}"></td>
+                                        <td>注册资本</td>
+                                        <td colspan="2" th:text="${query.cpcComid.comMoney}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>公司地址</td>
+                                        <td colspan="4" th:text="${query.cpcComid.comAddress}"></td>
+                                        <td>所属行业</td>
+                                        <td th:text="${query.cpcComid.comPro}">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>经营范围:</td>
+                                        <td colspan="7" th:text="${query.cpcComid.comBbs}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>所获荣誉</td>
+                                        <td colspan="7" th:text="${query.cpcComid.comHonour}"></td>
+                                    </tr>
+                                </table>
+                                <p style="text-align: center">二、意见建议及落实</p>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td>对流动党委建议<br>与要求:</td>
+                                        <td colspan="8" th:text="${query.cpcDwadvise}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>对家乡发展的建议:</td>
+                                        <td colspan="8" th:text="${query.cpcHomeadvise}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>对济南发展的建议</td>
+                                        <td colspan="8" th:text="${query.cpcJnadvise}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>对招商引资、招财引智<br>政策、条件、环境等建<br>议:</td>
+                                        <td colspan="8" th:text="${query.cpcOtheradvise}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>个人诉求:</td>
+                                        <td colspan="8" th:text="${query.cpcRequire}"></td>
+                                    </tr>
+                                </table>
+                                <p style="text-align: center">三、动态管理</p>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td>流入时间</td>
+                                        <td colspan="2" th:text="${query.iof.iofInflow}"></td>
+                                        <td>流入地点</td>
+                                        <td colspan="2">暂无</td>
+                                        <td>纳入流动党委管<br>理时间</td>
+                                        <td colspan="2" th:text="${query.iof.iofInflow}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>纳入党支部</td>
+                                        <td colspan="2" th:text="${query.iof.iofJoinparty}"></td>
+                                        <td>在济南支部所在<br>党委</td>
+                                        <td colspan="2" th:text="${query.cpcParid.parName}"></td>
+                                        <td>流出济南时间</td>
+                                        <td colspan="2" th:text="${query.iof.iofOutflow}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>流出地点</td>
+                                        <td colspan="8" th:text="${query.iof.iofOutaddress}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>流出后纳入管理情况</td>
+                                        <td colspan="8" th:text="${query.iof.iofManage}"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>救助情况</td>
+                                        <td colspan="8" th:text="${query.iof.iofHelp}"></td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+
+
+<!-- 自定义js -->
+<script th:src="@{/js/content.js}"></script>
+
+
+<!-- Peity -->
+<script th:src="@{/js/plugins/peity/jquery.peity.min.js}"></script>
+
+<!-- Peity -->
+<script th:src="@{/js/demo/peity-demo.js}"></script>
+</body>
+</html>

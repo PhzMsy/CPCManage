@@ -4,263 +4,40 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8def4db4-0310-4a2f-80cd-ae20fd3bd890" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/config/FilterConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/config/LoginConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/config/MyBatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/login/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/login/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/menu/MenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/handle/LoginInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/LoginMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/MenuMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/login/Impl/LoginServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/login/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/menu/Impl/MenuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/menu/MenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/LoginMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/MeauMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/demo/webuploader-demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/patterns/header-profile-skin-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/patterns/header-profile-skin-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/patterns/header-profile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/patterns/shattered.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/blueimp/css/blueimp-gallery-indicator.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/blueimp/css/blueimp-gallery-video.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/blueimp/css/blueimp-gallery.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/blueimp/css/blueimp-gallery.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/blueimp/css/demo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/blueimp/img/error.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/blueimp/img/error.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/blueimp/img/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/blueimp/img/play-pause.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/blueimp/img/play-pause.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/blueimp/img/video-play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/blueimp/img/video-play.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/bootstrap-table/bootstrap-table.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/chosen/chosen-sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/chosen/chosen-sprite@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/chosen/chosen.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/clockpicker/clockpicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/codemirror/ambiance.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/codemirror/codemirror.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/colorpicker/css/bootstrap-colorpicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/colorpicker/img/bootstrap-colorpicker/alpha-horizontal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/colorpicker/img/bootstrap-colorpicker/alpha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/colorpicker/img/bootstrap-colorpicker/hue-horizontal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/colorpicker/img/bootstrap-colorpicker/hue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/colorpicker/img/bootstrap-colorpicker/saturation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/cropper/cropper.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/dataTables/dataTables.bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/datapicker/datepicker3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/dropzone/basic.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/dropzone/dropzone.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/duallistbox/bootstrap-duallistbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/footable/fonts/footable.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/footable/fonts/footable.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/footable/fonts/footable.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/footable/fonts/footable.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/footable/footable.core.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/fullcalendar/fullcalendar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/fullcalendar/fullcalendar.print.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/iCheck/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/iCheck/green.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/iCheck/green@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/images/sort_asc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/images/sort_desc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/images/sprite-skin-flat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/images/spritemap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/images/spritemap@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/ionRangeSlider/ion.rangeSlider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/ionRangeSlider/ion.rangeSlider.skinFlat.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/jQueryUI/images/ui-bg_flat_0_aaaaaa_40x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/jQueryUI/images/ui-bg_flat_75_ffffff_40x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/jQueryUI/images/ui-icons_222222_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/jQueryUI/images/ui-icons_454545_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/jQueryUI/images/ui-icons_888888_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/jQueryUI/jquery-ui-1.10.4.custom.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/jasny/jasny-bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/jqgrid/ui.jqgrid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/jsTree/32px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/jsTree/style.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/jsTree/throbber.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/markdown/bootstrap-markdown.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/morris/morris-0.4.3.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/multiselect/bootstrap-multiselect.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/nouslider/jquery.nouislider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/plyr/plyr.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/plyr/sprite.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/simditor/simditor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/steps/jquery.steps.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/summernote/summernote-bs3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/summernote/summernote.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/sweetalert/sweetalert.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/switchery/switchery.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/toastr/toastr.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/treeview/bootstrap-treeview.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/plugins/webuploader/webuploader.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/a1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/a2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/a3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/a4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/a5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/a6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/a7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/a8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/a9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/browser.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/iconfont-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/icons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/loading-upload.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/locked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/login-background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/p1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/p2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/p3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/profile.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/profile_small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/progress.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/sprite-skin-flat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/success.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/webuploader.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/wenku_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/content.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/hAdmin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery-ui-1.10.4.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery-ui.custom.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.min.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/beautifyhtml/beautifyhtml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/blueimp/jquery.blueimp-gallery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/bootstrap-table/bootstrap-table.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/chartJs/Chart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/chosen/chosen.jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/cropper/cropper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/dataTables/dataTables.bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/dataTables/jquery.dataTables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/datapicker/bootstrap-datepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/duallistbox/jquery.bootstrap-duallistbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/echarts/echarts-all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/flot/curvedLines.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/flot/jquery.flot.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/flot/jquery.flot.pie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/flot/jquery.flot.resize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/flot/jquery.flot.spline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/flot/jquery.flot.symbol.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/flot/jquery.flot.tooltip.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/footable/footable.all.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/fullcalendar/fullcalendar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/fullcalendar/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/gritter/images/gritter-light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/gritter/images/gritter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/gritter/images/ie-spacer.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/gritter/jquery.gritter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/gritter/jquery.gritter.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/iCheck/icheck.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/ionRangeSlider/ion.rangeSlider.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/ionRangeSlider/jasny/jasny-bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/jasny/jasny-bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/jeditable/jquery.jeditable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/jqgrid/i18n/grid.locale-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/jqgrid/jquery.jqGrid.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/jquery-ui/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/jsTree/jstree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/jsTree/jstree.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/extend/layer.ext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/laydate/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/laydate/need/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/laydate/skins/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/laydate/skins/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/layer.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/layim/data/chatlog.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/layim/data/friend.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/layim/data/group.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/layim/data/groups.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/layim/layim.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/layim/layim.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/layim/loading.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/default/icon_ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/default/textbg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/default/xubox_ico0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/default/xubox_loading0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/default/xubox_loading1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/default/xubox_loading2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/default/xubox_loading3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/default/xubox_title0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/layer.ext.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/moon/default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/layer/skin/moon/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/markdown/bootstrap-markdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/markdown/bootstrap-markdown.zh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/markdown/markdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/markdown/to-markdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/metisMenu/jquery.metisMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/multiselect/bootstrap-multiselect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/peity/jquery.peity.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/plyr/plyr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/preetyTextDiff/jquery.pretty-text-diff.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/prettyfile/bootstrap-prettyfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/slimscroll/jquery.slimscroll.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/sparkline/jquery.sparkline.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/suggest/bootstrap-suggest.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/suggest/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/toastr/toastr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/treeview/bootstrap-treeview.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/validate/additional-methods.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/validate/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/plugins/validate/messages_zh.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/menu/menuList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/menu/menuUpdate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/msy/boot/Test112.java" afterDir="false" />
+    <list default="true" id="8def4db4-0310-4a2f-80cd-ae20fd3bd890" name="Changes" comment="第一次提交 2023年2月28日上午 10:06">
+      <change afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/cpc/CpcController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/cpc/CpcDetailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/user/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Company.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Cpc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/CpcDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Edu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Family.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Iof.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Party.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/CpcDetailMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/CpcMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/cpc/CpcService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/cpc/impl/CpcServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/cpcdetail/CpcDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/cpcdetail/impl/CpcDetailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/user/Impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/user/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/CpcDetailMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/CpcMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cpc/cpcDetail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cpc/cpcList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cpc/cpcUpdate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index_v1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user/userList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/menu/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/menu/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,8 +48,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Mapper" />
         <option value="Class" />
+        <option value="Mapper" />
         <option value="HTML File" />
       </list>
     </option>
@@ -302,6 +79,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
@@ -315,13 +93,13 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/Cpc/CPCManage/src/main/resources/static&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Cpc/CPCManage/src/main/resources/templates&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;fileTemplates&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;eafb252bf2aef0e2b381caa2afd6287b&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -333,6 +111,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Cpc\CPCManage\src\main\resources\templates" />
       <recent name="F:\Cpc\CPCManage\src\main\resources\static" />
       <recent name="F:\Cpc\CPCManage\src\main\resources" />
     </key>
@@ -422,8 +201,18 @@
       <workItem from="1677466083488" duration="49000" />
       <workItem from="1677466182580" duration="12283000" />
       <workItem from="1677484380424" duration="14525000" />
-      <workItem from="1677545116785" duration="4778000" />
+      <workItem from="1677545116785" duration="6149000" />
+      <workItem from="1677551307594" duration="27917000" />
+      <workItem from="1677631922152" duration="24625000" />
     </task>
+    <task id="LOCAL-00001" summary="第一次提交 2023年2月28日上午 10:06">
+      <created>1677550986034</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677550986034</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,5 +228,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第一次提交 2023年2月28日上午 10:06" />
+    <option name="LAST_COMMIT_MESSAGE" value="第一次提交 2023年2月28日上午 10:06" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

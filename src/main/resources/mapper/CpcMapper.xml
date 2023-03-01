@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.msy.boot.mapper.CpcMapper">
+    <resultMap id="FourTableQuery" type="org.msy.boot.entity.CpcDetail">
+        <id property="cpcId" column="cpc_id"/>
+        <result property="cpcCname" column="cpc_cname"/>
+        <result property="cpcBirth" column="cpc_birth"/>
+        <result property="cpcJoin" column="cpc_join"/>
+        <result property="cpcMarry" column="cpc_marry"/>
+        <result property="cpcAddress" column="cpc_address"/>
+        <result property="cpcEmail" column="cpc_email"/>
+        <result property="cpcNowaddr" column="cpc_nowaddr"/>
+        <result property="cpcJobtime" column="cpc_jobtime"/>
+        <result property="cpcStrengt" column="cpc_strengt"/>
+        <result property="cpcDwadvise" column="cpc_dwadvise"/>
+        <result property="cpcHomeadvise" column="cpc_homeadvise"/>
+        <result property="cpcJnadvise" column="cpc_jnadvise"/>
+        <result property="cpcOtheradvise" column="cpc_otheradvise"/>
+        <result property="cpcRequire" column="cpc_require"/>
+        <association property="cpc" column="cpc_id" javaType="org.msy.boot.entity.Cpc">
+            <id property="cpcId" column="cpc_id"/>
+            <result property="cpcName" column="cpc_name"/>
+            <result property="cpcSex" column="cpc_sex"/>
+            <result property="cpcOrigin" column="cpc_origin"/>
+            <result property="cpcNation" column="cpc_nation"/>
+            <result property="cpcIdCard" column="cpc_idcard"/>
+            <result property="cpcPhone" column="cpc_phone"/>
+        </association>
+        <!--公司-->
+        <association property="cpcComid" column="cpc_comid" javaType="company" select="org.msy.boot.mapper.CpcMapper.queryByComp">
+
+        </association>
+        <!--party 党委-->
+        <association property="cpcParid" column="cpc_parid" javaType="party" select="org.msy.boot.mapper.CpcMapper.queryByParty">
+
+        </association>
+
+        <!--流入流出-->
+        <association property="iof" column="cpc_id" javaType="iof" select="org.msy.boot.mapper.CpcMapper.queryByIof">
+            <id property="iofId" column="cpc_id"/>
+
+        </association>
+        <!--学历-->
+        <association property="edu"  column="cpc_id" javaType="edu" select="org.msy.boot.mapper.CpcMapper.queryByEdu">
+
+        </association>
+        <!--家庭-->
+        <collection property="familyList" column="cpc_id" ofType="family" select="org.msy.boot.mapper.CpcMapper.queryByFamily">
+            <id property="faCpcid" column="cpc_id"/>
+        </collection>
+
+    </resultMap>
+
+    <select id="queryAll" resultMap="FourTableQuery">
+        SELECT c.*,
+               cd.cpc_cname,
+               cd.cpc_birth,
+               cd.cpc_join,
+               cd.cpc_marry,
+               cd.cpc_address,
+               cd.cpc_email,
+               cd.cpc_nowaddr,
+               cd.cpc_jobtime,
+               cd.cpc_strengt,
+               cd.cpc_dwadvise,
+               cd.cpc_homeadvise,
+               cd.cpc_jnadvise,
+               cd.cpc_otheradvise,
+               cd.cpc_require,
+               cd.cpc_comid,
+               cd.cpc_parid
+        from cpc c
+                 join cpc_detail cd on c.cpc_id = cd.cpc_id
+    </select>
+
+    <select id="queryByComp" resultType="company">
+        select *
+        from company where com_id = #{cpc_id}
+    </select>
+
+    <select id="queryByParty" resultType="party">
+        select * from party where par_id  = #{cpc_id}
+    </select>
+    <select id="queryByIof" resultType="iof">
+        select * from iof where iof_id = #{cpc_id}
+    </select>
+    <select id="queryByEdu" resultType="edu">
+        select * from edu where edu_id = #{cpc_id}
+    </select>
+    <select id="queryByFamily" resultType="family">
+        select * from family where fa_cpcid = #{cpc_id}
+    </select>
+</mapper>
