@@ -7,6 +7,10 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import org.springframework.validation.annotation.Validated;
+
+import javax.validation.constraints.NotNull;
 
 /**
  * @author 11612
@@ -17,11 +21,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @TableName("cpc")
+@Validated //数据校验
 public class Cpc {
     @TableId(value = "cpc_id",type = IdType.AUTO)
     private Integer cpcId;
+    @NotNull
     private String cpcName;
     private String cpcOrigin;
+
     private String cpcSex;
     private String cpcNation;
     @TableField("cpc_idcard")

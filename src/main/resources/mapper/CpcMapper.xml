@@ -27,13 +27,16 @@
             <result property="cpcNation" column="cpc_nation"/>
             <result property="cpcIdCard" column="cpc_idcard"/>
             <result property="cpcPhone" column="cpc_phone"/>
+            <result property="cpcWorktype" column="cpc_worktype"/>
         </association>
         <!--公司-->
-        <association property="cpcComid" column="cpc_comid" javaType="company" select="org.msy.boot.mapper.CpcMapper.queryByComp">
+        <association property="cpcComid" column="cpc_comid" javaType="company"
+                     select="org.msy.boot.mapper.CpcMapper.queryByComp">
 
         </association>
         <!--party 党委-->
-        <association property="cpcParid" column="cpc_parid" javaType="party" select="org.msy.boot.mapper.CpcMapper.queryByParty">
+        <association property="cpcParid" column="cpc_parid" javaType="party"
+                     select="org.msy.boot.mapper.CpcMapper.queryByParty">
 
         </association>
 
@@ -43,14 +46,14 @@
 
         </association>
         <!--学历-->
-        <association property="edu"  column="cpc_id" javaType="edu" select="org.msy.boot.mapper.CpcMapper.queryByEdu">
+        <association property="edu" column="cpc_id" javaType="edu" select="org.msy.boot.mapper.CpcMapper.queryByEdu">
 
         </association>
         <!--家庭-->
-        <collection property="familyList" column="cpc_id" ofType="family" select="org.msy.boot.mapper.CpcMapper.queryByFamily">
+        <collection property="familyList" column="cpc_id" ofType="family"
+                    select="org.msy.boot.mapper.CpcMapper.queryByFamily">
             <id property="faCpcid" column="cpc_id"/>
         </collection>
-
     </resultMap>
 
     <select id="queryAll" resultMap="FourTableQuery">
@@ -73,23 +76,78 @@
                cd.cpc_parid
         from cpc c
                  join cpc_detail cd on c.cpc_id = cd.cpc_id
+
     </select>
 
     <select id="queryByComp" resultType="company">
         select *
-        from company where com_id = #{cpc_id}
+        from company
+        where com_id = #{cpc_id}
     </select>
 
     <select id="queryByParty" resultType="party">
-        select * from party where par_id  = #{cpc_id}
+        select *
+        from party
+        where par_id = #{cpc_parid}
     </select>
+
     <select id="queryByIof" resultType="iof">
-        select * from iof where iof_id = #{cpc_id}
+        select *
+        from iof
+        where iof_id = #{cpc_id}
     </select>
+
     <select id="queryByEdu" resultType="edu">
-        select * from edu where edu_id = #{cpc_id}
+        select *
+        from edu
+        where edu_id = #{cpc_id}
     </select>
+
     <select id="queryByFamily" resultType="family">
-        select * from family where fa_cpcid = #{cpc_id}
+        select *
+        from family
+        where fa_cpcid = #{cpc_id}
+    </select>
+
+    <select id="fuzzyQuery" resultMap="FourTableQuery">
+        SELECT c.*,
+        cd.cpc_cname,
+        cd.cpc_birth,
+        cd.cpc_join,
+        cd.cpc_marry,
+        cd.cpc_address,
+        cd.cpc_email,
+        cd.cpc_nowaddr,
+        cd.cpc_jobtime,
+        cd.cpc_strengt,
+        cd.cpc_dwadvise,
+        cd.cpc_homeadvise,
+        cd.cpc_jnadvise,
+        cd.cpc_otheradvise,
+        cd.cpc_require,
+        cd.cpc_comid,
+        cd.cpc_parid
+        from cpc c
+        join cpc_detail cd on c.cpc_id = cd.cpc_id
+        <where>
+            1=1
+            <if test="f!=null">
+                <if test="f.fuzzyName != null and f.fuzzyName != ''">
+                    AND concat(c.cpc_name) like concat('%',#{f.fuzzyName},'%')
+                </if>
+                <if test="f.fuzzyPhone != null and f.fuzzyPhone != ''">
+                    AND concat(c.cpc_phone) like concat('%',#{f.fuzzyPhone},'%')
+                </if>
+                <if test="f.fuzzyCpcOrigin != null and f.fuzzyCpcOrigin != ''">
+                    AND concat(c.cpc_origin) like concat('%',#{f.fuzzyCpcOrigin},'%')
+                </if>
+                <if test="f.fuzzyParty != null and f.fuzzyParty != ''">
+                    AND concat(cd.cpc_parid) like concat('%',#{f.fuzzyParty},'%')
+                </if>
+                <if test="f.fuzzyCpcWorkType != null and f.fuzzyCpcWorkType != ''">
+                    AND concat(c.cpc_worktype) like concat('%',#{f.fuzzyCpcWorkType},'%')
+                </if>
+            </if>
+        </where>
     </select>
 </mapper>

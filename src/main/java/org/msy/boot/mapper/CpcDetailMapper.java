@@ -15,4 +15,6 @@ import java.util.List;
 public interface CpcDetailMapper extends BaseMapper<CpcDetail> {
 
     CpcDetail queryById(@Param("cpc_id") Integer id);
+
+    int updateForParId(@Param("parId") Integer parId,@Param("cpcId") Integer cpcId);
 }

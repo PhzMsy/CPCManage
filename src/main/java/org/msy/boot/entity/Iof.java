@@ -1,7 +1,11 @@
 package org.msy.boot.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.sql.Date;
 
@@ -12,8 +16,13 @@ import java.sql.Date;
 @Data
 @TableName("iof")
 public class Iof {
+    @TableId(value = "iof_id",type = IdType.AUTO)
     private Integer iofId;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(timezone = "GMT+8",pattern = "yyyy-MM-dd")
     private Date iofInflow;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(timezone = "GMT+8",pattern = "yyyy-MM-dd")
     private Date iofOutflow;
     private String iofOutaddress;
     private String iofJoinparty;

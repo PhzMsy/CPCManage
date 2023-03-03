@@ -1,6 +1,7 @@
 package org.msy.boot.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
@@ -41,11 +42,17 @@ public class CpcDetail {
     private String cpcJnadvise;
     private String cpcOtheradvise;
     private String cpcRequire;
+    @TableField(exist = false)
     private Cpc cpc;
+    @TableField(exist = false)
     private Company cpcComid;
+    @TableField(exist = false)
     private Party cpcParid;
+    @TableField(exist = false)
     private List<Family> familyList;
+    @TableField(exist = false)
     private Edu edu;
+    @TableField(exist = false)
     private Iof iof;
 
 }

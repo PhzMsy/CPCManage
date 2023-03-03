@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("patry")
+@TableName("party")
 public class Party {
     @TableId(value = "par_id",type = IdType.AUTO)
     private Integer parId;

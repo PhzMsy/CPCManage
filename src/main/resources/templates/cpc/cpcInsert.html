@@ -44,39 +44,27 @@
                                 </div>
                             </div>
                             <div class="ibox-content">
-                                <form th:action="@{/CpcDetail/updateDetail}" method="post">
+                                <form th:action="@{/CpcDetail/insert}" method="post">
                                     <table class="table table-bordered">
                                         <tr>
                                             <td colspan="1" rowspan="3">图片占位</td>
-                                            <input type="hidden" name="cpcId" th:value="${query.cpcId}">
-                                            <input type="hidden" name="cpc.cpcId" th:value="${query.cpc.cpcId}"
-                                                   required>
-                                            <input type="hidden" name="cpcComid.comId"
-                                                   th:value="${query.cpcComid.comId}" required>
-                                            <input type="hidden" name="cpcParid.parId"
-                                                   th:value="${query.cpcParid.parId}" required>
-                                            <input type="hidden" name="edu.eduId" th:value="${query.edu.eduId}"
-                                                   required>
-                                            <input type="hidden" name="iof.iofId" th:value="${query.iof.iofId}"
-                                                   required>
                                             <td>姓名:</td>
-                                            <td><input type="text" name="cpc.cpcName" th:value="${query.cpc.cpcName}"
+                                            <td><input type="text" name="cpc.cpcName"
                                                        required>
                                             </td>
-
                                             <td>曾用名:</td>
-                                            <td><input type="text" name="cpcCname" th:value="${query.cpcCname}"
+                                            <td><input type="text" name="cpcCname"
                                                        required></td>
                                             <td>籍贯:</td>
                                             <td><input type="text" name="cpc.cpcOrigin"
-                                                       th:value="${query.cpc.cpcOrigin}" required></td>
+                                                       required></td>
                                             <td>性别:</td>
                                             <td>
-                                                <select th:value="${query.cpc.cpcSex}" name="cpc.cpcSex">
+                                                <select name="cpc.cpcSex">
                                                     <option value="">请选择性别</option>
-                                                    <option th:selected="${query.cpc.cpcSex=='男'}" value="男">男
+                                                    <option value="男">男
                                                     </option>
-                                                    <option th:selected="${query.cpc.cpcSex=='女'}" value="女">女
+                                                    <option value="女">女
                                                     </option>
                                                 </select>
                                             </td>
@@ -84,20 +72,20 @@
                                         <tr>
                                             <td>民族:</td>
                                             <td><input type="text" name="cpc.cpcNation"
-                                                       th:value="${query.cpc.cpcNation}" required></td>
+                                                       required></td>
                                             <td>出生年月:</td>
-                                            <td><input type="text" name="cpcBirth" th:value="${query.cpcBirth}"
+                                            <td><input type="text" name="cpcBirth"
                                                        required></td>
                                             <td>入党时间:</td>
-                                            <td><input type="text" name="cpcJoin" th:value="${query.cpcJoin}" required>
+                                            <td><input type="text" name="cpcJoin" required>
                                             </td>
                                             <td>婚姻状况:</td>
                                             <td>
-                                                <select th:value="${query.cpcMarry}" name="cpcMarry">
+                                                <select name="cpcMarry">
                                                     <option value="">请选择婚姻状况</option>
-                                                    <option th:selected="${query.cpcMarry=='已婚'}" value="已婚">已婚
+                                                    <option value="已婚">已婚
                                                     </option>
-                                                    <option th:selected="${query.cpcMarry=='未婚'}" value="未婚">未婚
+                                                    <option value="未婚">未婚
                                                     </option>
                                                 </select>
                                             </td>
@@ -105,65 +93,65 @@
                                         <tr>
                                             <td>身份证号</td>
                                             <td colspan="3"><input type="text" name="cpc.cpcIdCard"
-                                                                   th:value="${query.cpc.cpcIdCard}" required></td>
+                                                                   required></td>
                                             <td>联系方式</td>
                                             <td colspan="3"><input type="text" name="cpc.cpcPhone"
-                                                                   th:value="${query.cpc.cpcPhone}" required></td>
+                                                                   required></td>
                                         </tr>
                                         <tr>
                                             <td>家庭住址:</td>
                                             <td colspan="4"><input type="text" name="cpcAddress"
-                                                                   th:value="${query.cpcAddress}" required></td>
+                                                                   required></td>
                                             <td>邮箱:</td>
                                             <td colspan="3"><input type="text" name="cpcEmail"
-                                                                   th:value="${query.cpcEmail}" required></td>
+                                                                   required></td>
                                         </tr>
                                         <tr>
                                             <td>现居住地/br(小区/学校):</td>
                                             <td colspan="4"><input type="text" name="cpcNowaddr"
-                                                                   th:value="${query.cpcNowaddr}" required></td>
+                                                                   required></td>
                                             <td>到济工作/生活/br时间:</td>
                                             <td colspan="3"><input type="text" name="cpcJobtime"
-                                                                   th:value="${query.cpcJobtime}" required></td>
+                                                                   required></td>
                                         </tr>
                                         <tr>
                                             <td>组织关系所在党支部</td>
                                             <td colspan="2"><input type="text" name="cpcParid.parName"
-                                                                   th:value="${query.cpcParid.parName}"></td>
+                                            ></td>
                                             <td>流动党员隶属管<br>理支部:</td>
                                             <td colspan="2"><input type="text"
-                                                                   th:value="${query.cpcParid.parName}"></td>
+                                            ></td>
                                             <td>特长:</td>
                                             <td colspan="2"><input type="text" name="cpcStrengt"
-                                                                   th:value="${query.cpcStrengt}"></td>
+                                            ></td>
                                         </tr>
                                         <tr>
                                             <td rowspan="2">学历信息</td>
                                             <td>学历(全日制):</td>
-                                            <td><input type="text" name="edu.eduEdu" th:value="${query.edu.eduEdu}"
+                                            <td><input type="text" name="edu.eduEdu"
                                                        required>
                                             </td>
                                             <td>学位:</td>
                                             <td><input type="text" name="edu.eduDegree"
-                                                       th:value="${query.edu.eduDegree}" required></td>
+                                                       required></td>
                                             <td>专业:</td>
-                                            <td><input type="text" name="edu.eduMajor" th:value="${query.edu.eduMajor}"
+                                            <td><input type="text" name="edu.eduMajor"
                                                        required>
                                             </td>
                                             <td>毕业院校:</td>
                                             <td><input type="text" name="edu.eduSchool"
-                                                       th:value="${query.edu.eduSchool}" required></td>
+                                                       required></td>
                                         </tr>
                                         <tr>
                                             <td>入学时间</td>
                                             <td colspan="3"><input type="text" name="edu.eduStrat"
-                                                                   th:value="${query.edu.eduStrat}" required></td>
+                                                                   required></td>
                                             <td>毕业时间</td>
                                             <td colspan="2"><input type="text" name="edu.eduEnd"
-                                                                   th:value="${query.edu.eduEnd}" required></td>
+                                                                   required></td>
                                         </tr>
                                         <tr>
-                                            <td th:rowspan="${query.familyList.size()}+1">家庭主要成员<br>(仅填写配偶及子女)
+                                            <td rowspan="3">家庭主要成员<br>(仅填写配偶及子女)
                                             </td>
                                             <td>关系</td>
                                             <td>姓名</td>
@@ -173,57 +161,98 @@
                                             <td>联系电话</td>
                                             <td>备注</td>
                                         </tr>
-                                        <tr th:each="fm,s:${query.familyList}">
+                                        <tr>
                                             <td>
-                                                <input type="hidden" th:value="${fm.faId}" th:name="|familyList[${s.index}].faId|">
-                                                <input type="hidden" th:value="${fm.faCpcid}" th:name="|familyList[${s.index}].faCpcid|">
-                                                <input type="text" th:value="${fm.faRelation}" th:name="|familyList[${s.index}].faRelation|">
+                                                <input type="hidden" name="familyList[0].faId">
+                                                <input type="hidden" name="familyList[0].faCpcid">
+                                                <input type="text" name="familyList[0].faRelation">
                                             </td>
-                                            <td><input type="text" th:value="${fm.faName}" th:name="|familyList[${s.index}].faName|">
+                                            <td><input type="text" name="familyList[0].faName">
                                             </td>
-                                            <td><input type="text" th:value="${fm.faBirth}" th:name="|familyList[${s.index}].faBirth|">
+                                            <td><input type="text" name="familyList[0].faBirth">
                                             </td>
                                             <td colspan="2">
-                                                <input type="text" th:value="${fm.faJob}" th:name="|familyList[${s.index}].faJob|">
+                                                <input type="text" name="familyList[0].faJob">
                                             </td>
-                                            <td><input type="text" th:value="${fm.faPost}" th:name="|familyList[${s.index}].faPost|">
+                                            <td><input type="text" name="familyList[0].faPost">
                                             </td>
-                                            <td><input type="text" th:value="${fm.faPhone}" th:name="|familyList[${s.index}].faPhone|">
+                                            <td><input type="text" name="familyList[0].faPhone">
                                             </td>
-                                            <td><input type="text" th:value="${fm.faOther}" th:name="|familyList[${s.index}].faOther|">
+                                            <td><input type="text" name="familyList[0].faOther">
                                             </td>
                                         </tr>
                                         <tr>
+                                            <td>
+                                                <input type="hidden" name="familyList[1].faId">
+                                                <input type="hidden" name="familyList[1].faCpcid">
+                                                <input type="text" name="familyList[1].faRelation">
+                                            </td>
+                                            <td><input type="text" name="familyList[1].faName">
+                                            </td>
+                                            <td><input type="text" name="familyList[1].faBirth">
+                                            </td>
+                                            <td colspan="2">
+                                                <input type="text" name="familyList[1].faJob">
+                                            </td>
+                                            <td><input type="text" name="familyList[1].faPost">
+                                            </td>
+                                            <td><input type="text" name="familyList[1].faPhone">
+                                            </td>
+                                            <td><input type="text" name="familyList[1].faOther">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="hidden" name="familyList[2].faId">
+                                                <input type="hidden" name="familyList[2].faCpcid">
+                                                <input type="text" name="familyList[2].faRelation">
+                                            </td>
+                                            <td><input type="text" name="familyList[2].faName">
+                                            </td>
+                                            <td><input type="text" name="familyList[2].faBirth">
+                                            </td>
+                                            <td colspan="2">
+                                                <input type="text" name="familyList[2].faJob">
+                                            </td>
+                                            <td><input type="text" name="familyList[2].faPost">
+                                            </td>
+                                            <td><input type="text" name="familyList[2].faPhone">
+                                            </td>
+                                            <td><input type="text" name="familyList[2].faOther">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
                                             <td>当前工作状态:</td>
                                             <td colspan="3">
-                                                <select th:value="${query.cpc.cpcWorktype}" name="cpc.cpcWorktype">
+                                                <select name="cpc.cpcWorktype">
                                                     <option value="">请选择当前工作状态</option>
-                                                    <option th:selected="${query.cpc.cpcWorktype=='企业管理者(包括基层及中高层管理者)'}"
+                                                    <option
                                                             value="企业管理者(包括基层及中高层管理者)">
                                                         企业管理者(包括基层及中高层管理者)
                                                     </option>
-                                                    <option th:selected="${query.cpc.cpcWorktype=='政府/机关干部/公务员'}"
+                                                    <option
                                                             value="政府/机关干部/公务员">政府/机关干部/公务员
                                                     </option>
-                                                    <option th:selected="${query.cpc.cpcWorktype=='职员'}" value="职员">
+                                                    <option value="职员">
                                                         职员
                                                     </option>
-                                                    <option th:selected="${query.cpc.cpcWorktype=='个体经营者/承包商'}"
+                                                    <option
                                                             value="个体经营者/承包商">个体经营者/承包商
                                                     </option>
-                                                    <option th:selected="${query.cpc.cpcWorktype=='农林牧渔劳动者'}"
+                                                    <option
                                                             value="农林牧渔劳动者">农林牧渔劳动者
                                                     </option>
-                                                    <option th:selected="${query.cpc.cpcWorktype=='退休'}" value="退休">
+                                                    <option value="退休">
                                                         退休
                                                     </option>
-                                                    <option th:selected="${query.cpc.cpcWorktype=='自由职业者'}"
+                                                    <option
                                                             value="自由职业者">自由职业者
                                                     </option>
-                                                    <option th:selected="${query.cpc.cpcWorktype=='在校学生'}"
+                                                    <option
                                                             value="在校学生">在校学生
                                                     </option>
-                                                    <option th:selected="${query.cpc.cpcWorktype=='暂无职业'}"
+                                                    <option
                                                             value="暂无职业">暂无职业
                                                     </option>
                                                 </select>
@@ -241,78 +270,78 @@
                                             </td>
                                             <td>公司名称:</td>
                                             <td colspan="2"><input type="text" name="cpcComid.comName"
-                                                                   th:value="${query.cpcComid.comName}"></td>
+                                            ></td>
                                             <td>公司注册日期:</td>
                                             <td><input type="text" name="cpcComid.comDate"
-                                                       th:value="${query.cpcComid.comDate}"></td>
+                                            ></td>
                                             </td>
                                             <td>注册资本</td>
                                             <td colspan="2"><input type="text" name="cpcComid.comMoney"
-                                                                   th:value="${query.cpcComid.comMoney}"></td>
+                                            ></td>
                                         </tr>
                                         <tr>
                                             <td>公司地址</td>
                                             <td colspan="4"><input type="text" name="cpcComid.comAddress"
-                                                                   th:value="${query.cpcComid.comAddress}"></td>
+                                            ></td>
                                             <td>所属行业</td>
                                             <td>
-                                                <select th:value="${query.cpc.cpcWorktype}" name="cpcComid.comPro">
+                                                <select name="cpcComid.comPro">
                                                     <option value="">请选择所属行业</option>
-                                                    <option th:selected="${query.cpcComid.comPro=='农、林、牧、渔业'}"
+                                                    <option
                                                             value="农、林、牧、渔业">农、林、牧、渔业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='采矿业'}"
+                                                    <option
                                                             value="采矿业">采矿业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='制造业'}"
+                                                    <option
                                                             value="制造业">制造业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='电力、燃气及水的生产和供应业'}"
+                                                    <option
                                                             value="电力、燃气及水的生产和供应业">电力、燃气及水的生产和供应业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='建筑业'}"
+                                                    <option
                                                             value="建筑业">建筑业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='交通运输、仓储和邮政业'}"
+                                                    <option
                                                             value="交通运输、仓储和邮政业">交通运输、仓储和邮政业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='信息传输、计算机服务和软件业'}"
+                                                    <option
                                                             value="信息传输、计算机服务和软件业">信息传输、计算机服务和软件业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='批发和零售业'}"
+                                                    <option
                                                             value="批发和零售业">批发和零售业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='住宿和餐饮业'}"
+                                                    <option
                                                             value="住宿和餐饮业">住宿和餐饮业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='金融业'}"
+                                                    <option
                                                             value="金融业">金融业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='房地产业'}"
+                                                    <option
                                                             value="房地产业">房地产业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='租赁和商务服务业'}"
+                                                    <option
                                                             value="租赁和商务服务业">租赁和商务服务业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='科学研究、技术服务和地质勘查业'}"
+                                                    <option
                                                             value="科学研究、技术服务和地质勘查业">科学研究、技术服务和地质勘查业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='水利、环境和公共设置'}"
+                                                    <option
                                                             value="水利、环境和公共设置">水利、环境和公共设置
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='居民服务和其他服务业'}"
+                                                    <option
                                                             value="居民服务和其他服务业">居民服务和其他服务业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='教育'}" value="教育">
+                                                    <option value="教育">
                                                         教育
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='卫生、社会保障 和社会福利业'}"
+                                                    <option
                                                             value="卫生、社会保障 和社会福利业">卫生、社会保障 和社会福利业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='文化 、体育和娱乐业'}"
+                                                    <option
                                                             value="文化 、体育和娱乐业">文化 、体育和娱乐业
                                                     </option>
-                                                    <option th:selected="${query.cpcComid.comPro=='其他'}" value="其他">
+                                                    <option value="其他">
                                                         其他
                                                     </option>
                                                 </select>
@@ -321,12 +350,12 @@
                                         <tr>
                                             <td>经营范围:</td>
                                             <td colspan="7"><input type="text" name="cpcComid.comBbs"
-                                                                   th:value="${query.cpcComid.comBbs}"></td>
+                                            ></td>
                                         </tr>
                                         <tr>
                                             <td>所获荣誉</td>
                                             <td colspan="7"><input type="text" name="cpcComid.comHonour"
-                                                                   th:value="${query.cpcComid.comHonour}"></td>
+                                            ></td>
                                         </tr>
                                     </table>
                                     <p style="text-align: center">二、意见建议及落实</p>
@@ -334,27 +363,27 @@
                                         <tr>
                                             <td>对流动党委建议<br>与要求:</td>
                                             <td colspan="8"><input type="text" name="cpcDwadvise"
-                                                                   th:value="${query.cpcDwadvise}"></td>
+                                            ></td>
                                         </tr>
                                         <tr>
                                             <td>对家乡发展的建议:</td>
                                             <td colspan="8"><input type="text" name="cpcHomeadvise"
-                                                                   th:value="${query.cpcHomeadvise}"></td>
+                                            ></td>
                                         </tr>
                                         <tr>
                                             <td>对济南发展的建议</td>
                                             <td colspan="8"><input type="text" name="cpcJnadvise"
-                                                                   th:value="${query.cpcJnadvise}"></td>
+                                            ></td>
                                         </tr>
                                         <tr>
                                             <td>对招商引资、招财引智<br>政策、条件、环境等建<br>议:</td>
                                             <td colspan="8"><input type="text" name="cpcOtheradvise"
-                                                                   th:value="${query.cpcOtheradvise}"></td>
+                                            ></td>
                                         </tr>
                                         <tr>
                                             <td>个人诉求:</td>
                                             <td colspan="8"><input type="text" name="cpcRequire"
-                                                                   th:value="${query.cpcRequire}"></td>
+                                            ></td>
                                         </tr>
                                     </table>
                                     <p style="text-align: center">三、动态管理</p>
@@ -362,41 +391,41 @@
                                         <tr>
                                             <td>流入时间</td>
                                             <td colspan="2"><input type="text" name="iof.iofInflow"
-                                                                   th:value="${query.iof.iofInflow}"></td>
+                                            ></td>
                                             <td>流入地点</td>
                                             <td colspan="2">暂无</td>
                                             <td>纳入流动党委管<br>理时间</td>
                                             <td colspan="2"><input type="text" name="iof.iofInflow"
-                                                                   th:value="${query.iof.iofInflow}"></td>
+                                            ></td>
                                         </tr>
                                         <tr>
                                             <td>纳入党支部</td>
                                             <td colspan="2"><input type="text" name="iof.iofJoinparty"
-                                                                   th:value="${query.iof.iofJoinparty}"></td>
+                                            ></td>
                                             <td>在济南支部所在<br>党委</td>
                                             <td colspan="2"><input type="text"
-                                                                   th:value="${query.cpcParid.parName}"></td>
+                                            ></td>
                                             <td>流出济南时间</td>
                                             <td colspan="2"><input type="text" name="iof.iofOutflow"
-                                                                   th:value="${query.iof.iofOutflow}"></td>
+                                            ></td>
                                         </tr>
                                         <tr>
                                             <td>流出地点</td>
                                             <td colspan="8"><input type="text" name="iof.iofOutaddress"
-                                                                   th:value="${query.iof.iofOutaddress}"></td>
+                                            ></td>
                                         </tr>
                                         <tr>
                                             <td>流出后纳入管理情况</td>
                                             <td colspan="8"><input type="text" name="iof.iofManage"
-                                                                   th:value="${query.iof.iofManage}"></td>
+                                            ></td>
                                         </tr>
                                         <tr>
                                             <td>救助情况</td>
                                             <td colspan="8"><input type="text" name="iof.iofHelp"
-                                                                   th:value="${query.iof.iofHelp}"></td>
+                                            ></td>
                                         </tr>
                                     </table>
-                                    <input type="submit" value="保存">
+                                    <input type="submit" value="提交">
                                 </form>
                             </div>
                         </div>

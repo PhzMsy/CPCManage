@@ -1057,7 +1057,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="302" parent="286" name="com_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1101,7 +1101,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="312" parent="287" name="cpc_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1145,8 +1145,8 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="322" parent="288" name="cpc_id">
-      <AutoIncrement>1</AutoIncrement>
-      <DasType>int(10) unsigned zerofill|0s</DasType>
+      <AutoIncrement>2</AutoIncrement>
+      <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
@@ -1241,7 +1241,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="341" parent="289" name="edu_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1281,7 +1281,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="350" parent="290" name="fa_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1329,7 +1329,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="361" parent="291" name="iof_id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>2</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1346,124 +1346,136 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
     </column>
-    <index id="365" parent="291" name="PRIMARY">
+    <column id="365" parent="291" name="iof_joinparty">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="366" parent="291" name="iof_manage">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>6</Position>
+    </column>
+    <column id="367" parent="291" name="iof_help">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <index id="368" parent="291" name="PRIMARY">
       <ColNames>iof_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="366" parent="291" name="PRIMARY">
+    <key id="369" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="367" parent="292" name="mid">
+    <column id="370" parent="292" name="mid">
       <AutoIncrement>12</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="368" parent="292" name="m_name">
+    <column id="371" parent="292" name="m_name">
       <DasType>varchar(20)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="369" parent="292" name="pid">
+    <column id="372" parent="292" name="pid">
       <DasType>int|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="370" parent="292" name="status">
+    <column id="373" parent="292" name="status">
       <DasType>int|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="371" parent="292" name="href">
+    <column id="374" parent="292" name="href">
       <DasType>varchar(64)|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="372" parent="292" name="p_name">
+    <column id="375" parent="292" name="p_name">
       <DasType>varchar(20)|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="373" parent="292" name="is_deleted">
+    <column id="376" parent="292" name="is_deleted">
       <DasType>int|0s</DasType>
       <Position>7</Position>
     </column>
-    <index id="374" parent="292" name="PRIMARY">
+    <index id="377" parent="292" name="PRIMARY">
       <ColNames>mid</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="375" parent="292" name="PRIMARY">
+    <key id="378" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="376" parent="293" name="par_id">
-      <AutoIncrement>1</AutoIncrement>
+    <column id="379" parent="293" name="par_id">
+      <AutoIncrement>11</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="377" parent="293" name="par_name">
+    <column id="380" parent="293" name="par_name">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="378" parent="293" name="par_pid">
+    <column id="381" parent="293" name="par_pid">
       <DasType>int|0s</DasType>
       <Position>3</Position>
     </column>
-    <index id="379" parent="293" name="PRIMARY">
+    <index id="382" parent="293" name="PRIMARY">
       <ColNames>par_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="380" parent="293" name="PRIMARY">
+    <key id="383" parent="293" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="381" parent="294" name="id">
+    <column id="384" parent="294" name="id">
       <AutoIncrement>1610548514852933634</AutoIncrement>
       <Comment>主键id</Comment>
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="382" parent="294" name="name">
+    <column id="385" parent="294" name="name">
       <Comment>姓名</Comment>
       <DasType>varchar(30)|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="383" parent="294" name="age">
+    <column id="386" parent="294" name="age">
       <Comment>年龄</Comment>
       <DasType>int|0s</DasType>
       <Position>3</Position>
     </column>
-    <column id="384" parent="294" name="email">
+    <column id="387" parent="294" name="email">
       <Comment>邮箱</Comment>
       <DasType>varchar(50)|0s</DasType>
       <Position>4</Position>
     </column>
-    <column id="385" parent="294" name="create_time">
+    <column id="388" parent="294" name="create_time">
       <DasType>datetime|0s</DasType>
       <Position>5</Position>
     </column>
-    <column id="386" parent="294" name="update_time">
+    <column id="389" parent="294" name="update_time">
       <DasType>datetime|0s</DasType>
       <Position>6</Position>
     </column>
-    <column id="387" parent="294" name="version">
+    <column id="390" parent="294" name="version">
       <DasType>int|0s</DasType>
       <Position>7</Position>
     </column>
-    <column id="388" parent="294" name="deleted">
+    <column id="391" parent="294" name="deleted">
       <DasType>int|0s</DasType>
       <Position>8</Position>
     </column>
-    <index id="389" parent="294" name="PRIMARY">
+    <index id="392" parent="294" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="390" parent="294" name="PRIMARY">
+    <key id="393" parent="294" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

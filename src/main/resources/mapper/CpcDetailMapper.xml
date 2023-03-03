@@ -3,6 +3,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.msy.boot.mapper.CpcDetailMapper">
+    <update id="updateForParId">
+        update cpc_detail set cpc_parid=#{parId} where cpc_id=#{cpcId}
+    </update>
 
     <select id="queryById" resultMap="org.msy.boot.mapper.CpcMapper.FourTableQuery">
         SELECT c.*,
@@ -32,7 +35,7 @@
     </select>
 
     <select id="queryByParty" resultType="party">
-        select * from party where par_id  = #{cpc_id}
+        select * from party where par_id  = #{cpc_parid}
     </select>
     <select id="queryByIof" resultType="iof">
         select * from iof where iof_id = #{cpc_id}

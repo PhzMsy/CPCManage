@@ -2,6 +2,9 @@ package org.msy.boot.controller.system.cpc;
 
 import org.msy.boot.entity.Cpc;
 import org.msy.boot.entity.CpcDetail;
+import org.msy.boot.entity.FuzzyQuery;
+import org.msy.boot.entity.Party;
+import org.msy.boot.mapper.PartyMapper;
 import org.msy.boot.service.system.cpc.CpcService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,12 +26,29 @@ public class CpcController {
 
     @RequestMapping("/list.html")
     public String queryCpc(Model model){
-        List<CpcDetail> cpcList = cpcService.queryCpcList();
-        // 详情表中 数据查询出来
-        model.addAttribute("cpcList",cpcList);
+            List<CpcDetail> cpcList = cpcService.queryCpcList();
+            // 详情表中 数据查询出来
+            model.addAttribute("cpcList",cpcList);
+        return "cpc/cpcList";
+    }
+    @RequestMapping("/list1.html")
+    public String queryCpc1(Model model, FuzzyQuery fuzzyQuery){
+            List<CpcDetail> fuzzyList = cpcService.fuzzyQuery(fuzzyQuery);
+
+            model.addAttribute("cpcList",fuzzyList);
         return "cpc/cpcList";
     }
 
-
-
+    /**
+     * 流入流出管理表
+     * @param model
+     * @return
+     */
+    @RequestMapping("/ioflist.html")
+    public String queryCpc1(Model model){
+        List<CpcDetail> cpcList = cpcService.queryCpcList();
+        // 详情表中 数据查询出来
+        model.addAttribute("cpcList",cpcList);
+        return "cpc/cpcIofManage";
+    }
 }

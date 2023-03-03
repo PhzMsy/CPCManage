@@ -65,26 +65,6 @@
         <div class="col-sm-12">
 
             <div class="ibox float-e-margins">
-                <!--<div class="ibox-title">
-                    &lt;!&ndash;<h5>斑马纹效果</h5>
-                    <div class="ibox-tools">
-                        <a class="collapse-link">
-                            <i class="fa fa-chevron-up"></i>
-                        </a>
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="table_basic.html#">
-                            <i class="fa fa-wrench"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-user">
-                            <li><a href="table_basic.html#">选项1</a>
-                            </li>
-                            <li><a href="table_basic.html#">选项2</a>
-                            </li>
-                        </ul>
-                        <a class="close-link">
-                            <i class="fa fa-times"></i>
-                        </a>
-                    </div>&ndash;&gt;
-                </div>-->
                 <div class="ibox-content">
 
                     <table class="table table-striped">
@@ -103,6 +83,9 @@
                             <th>隶属管理支部</th>
                             <th>当前工作状态</th>
                             <th>流入日期</th>
+                            <th>流出日期</th>
+                            <th>流出地点</th>
+                            <th>状态</th>
                             <th>操作</th>
                         </tr>
                         </thead>
@@ -134,10 +117,18 @@
                             <td th:text="${cpc.iof.iofInflow}">
                                 <!--流入日期-->
                             </td>
+                            <td th:text="${cpc.iof.iofOutflow}">
+                                <!--流出日期-->
+                            </td>
+                            <td th:text="${cpc.iof.iofOutaddress}">
+                                <!--流出地点-->
+                            </td>
+                            <td th:if="${cpc.iof.iofOutflow != ''}" >已流出</td>
+                            <td th:if="${cpc.iof.iofOutflow == ''}" >已流入</td>
                             <td>
                                 <!--操作 编辑 和 详情  ajax写-->
                                 <!--<input type="button" value="编辑" id="updateById">-->
-                                <a th:href="@{/CpcDetail/updateById(cpcId=${cpc.cpcId})}">编辑</a>
+                                <a th:href="@{/CpcDetail/iofUpdateById(cpcId=${cpc.cpcId})}">编辑</a>
                                 <a th:href="@{/CpcDetail/queryById(cpcId=${cpc.cpcId})}">详情</a>
                                 <!--<input type="button" value="详情" id="queryById">-->
                             </td>

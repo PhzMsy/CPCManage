@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <link rel="shortcut icon" th:href="@{favicon.ico}">
+  <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+  <link th:href="@{/css/font-awesome.css}" rel="stylesheet">
+  <link th:href="@{/css/animate.css}" rel="stylesheet">
+  <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper wrapper-content">
+  <div class="row animated fadeInRight">
+    <div class="col-sm-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h3>首页/流动党员档案信息管理</h3>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+              <div class="ibox-title">
+                <h5>边框</h5>
+                <div class="ibox-tools">
+                  <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                  </a>
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="table_basic.html#">
+                    <i class="fa fa-wrench"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-user">
+                    <li><a href="table_basic.html#">选项1</a>
+                    </li>
+                    <li><a href="table_basic.html#">选项2</a>
+                    </li>
+                  </ul>
+                  <a class="close-link">
+                    <i class="fa fa-times"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="ibox-content">
+                <form th:action="@{/CpcDetail/updateDetail}" method="post">
+                  <table class="table table-bordered">
+                    <tr>
+                      <td colspan="1" rowspan="3">图片占位</td>
+                      <input type="hidden" name="cpcId" th:value="${query.cpcId}">
+                      <input type="hidden" name="cpc.cpcId" th:value="${query.cpc.cpcId}"
+                             required>
+                      <input type="hidden" name="cpcComid.comId"
+                             th:value="${query.cpcComid.comId}" required>
+                      <input type="hidden" name="cpcParid.parId"
+                             th:value="${query.cpcParid.parId}" required>
+                      <input type="hidden" name="edu.eduId" th:value="${query.edu.eduId}"
+                             required>
+                      <input type="hidden" name="iof.iofId" th:value="${query.iof.iofId}"
+                             required>
+                      <td>姓名:</td>
+                      <td><input type="text" name="cpc.cpcName" th:value="${query.cpc.cpcName}"
+                                 required>
+                      </td>
+                      <td>籍贯:</td>
+                      <td><input type="text" name="cpc.cpcOrigin"
+                                 th:value="${query.cpc.cpcOrigin}" required></td>
+                      <td>性别:</td>
+                      <td>
+                        <select th:value="${query.cpc.cpcSex}" name="cpc.cpcSex">
+                          <option value="">请选择性别</option>
+                          <option th:selected="${query.cpc.cpcSex=='男'}" value="男">男
+                          </option>
+                          <option th:selected="${query.cpc.cpcSex=='女'}" value="女">女
+                          </option>
+                        </select>
+                      </td>
+                      <td>民族:</td>
+                      <td><input type="text" name="cpc.cpcNation"
+                                 th:value="${query.cpc.cpcNation}" required></td>
+                    </tr>
+                    <tr>
+                      <td>出生年月:</td>
+                      <td><input type="text" name="cpcBirth" th:value="${query.cpcBirth}"
+                                 required></td>
+                      <td>政治面貌:</td>
+                      <td>
+                        <select  name="cpcMarry">
+                          <option value="">请选择政治面貌</option>
+                          <option  value="党员">党员
+                          </option>
+                          <option  value="预备党员">预备党员
+                          </option>
+                        </select>
+                      </td>
+                      <td>入党时间:</td>
+                      <td><input type="text" name="cpcJoin" th:value="${query.cpcJoin}" required>
+                      </td>
+                      <td>婚姻状况:</td>
+                      <td>
+                        <select th:value="${query.cpcMarry}" name="cpcMarry">
+                          <option value="">请选择婚姻状况</option>
+                          <option th:selected="${query.cpcMarry=='已婚'}" value="已婚">已婚
+                          </option>
+                          <option th:selected="${query.cpcMarry=='未婚'}" value="未婚">未婚
+                          </option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>身份证号</td>
+                      <td colspan="3"><input type="text" name="cpc.cpcIdCard"
+                                             th:value="${query.cpc.cpcIdCard}" required></td>
+                      <td>联系方式</td>
+                      <td colspan="3"><input type="text" name="cpc.cpcPhone"
+                                             th:value="${query.cpc.cpcPhone}" required></td>
+                    </tr>
+                    <tr>
+                      <td>家庭住址:</td>
+                      <td colspan="4"><input type="text" name="cpcAddress"
+                                             th:value="${query.cpcAddress}" required></td>
+                      <td>邮箱:</td>
+                      <td colspan="3"><input type="text" name="cpcEmail"
+                                             th:value="${query.cpcEmail}" required></td>
+                    </tr>
+                    <tr>
+                      <td>组织关系所在党支部</td>
+                      <td colspan="2"><input type="text" name="cpcParid.parName"
+                                             th:value="${query.cpcParid.parName}"></td>
+                      <td>流动党员隶属管<br>理支部:</td>
+                      <td colspan="2"><input type="text"
+                                             th:value="${query.cpcParid.parName}"></td>
+                      <td>特长:</td>
+                      <td colspan="2"><input type="text" name="cpcStrengt"
+                                             th:value="${query.cpcStrengt}"></td>
+                    </tr>
+                  <p style="text-align: center">党员流出管理</p>
+                  <table class="table table-bordered">
+                    <tr>
+                      <td>流入时间</td>
+                      <td colspan="2"><input type="text" name="iof.iofInflow"
+                                             th:value="${query.iof.iofInflow}"></td>
+                      <td>流入地点</td>
+                      <td colspan="2">暂无</td>
+                      <td>纳入流动党委管<br>理时间</td>
+                      <td colspan="2"><input type="text" name="iof.iofInflow"
+                                             th:value="${query.iof.iofInflow}"></td>
+                    </tr>
+                    <tr>
+                      <td>纳入党支部</td>
+                      <td colspan="2"><input type="text" name="iof.iofJoinparty"
+                                             th:value="${query.iof.iofJoinparty}"></td>
+                      <td>在济南支部所在<br>党委</td>
+                      <td colspan="2"><input type="text"
+                                             th:value="${query.cpcParid.parName}"></td>
+                      <td>流出济南时间</td>
+                      <td colspan="2"><input type="text" name="iof.iofOutflow"
+                                             th:value="${query.iof.iofOutflow}"></td>
+                    </tr>
+                    <tr>
+                      <td>流出地点</td>
+                      <td colspan="8"><input type="text" name="iof.iofOutaddress"
+                                             th:value="${query.iof.iofOutaddress}"></td>
+                    </tr>
+                    <tr>
+                      <td>流出后纳入管理情况</td>
+                      <td colspan="8"><input type="text" name="iof.iofManage"
+                                             th:value="${query.iof.iofManage}"></td>
+                    </tr>
+                  </table>
+                  <input type="submit" value="保存">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+
+
+<!-- 自定义js -->
+<script th:src="@{/js/content.js}"></script>
+
+
+<!-- Peity -->
+<script th:src="@{/js/plugins/peity/jquery.peity.min.js}"></script>
+
+<!-- Peity -->
+<script th:src="@{/js/demo/peity-demo.js}"></script>
+</body>
+</html>
