@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("_user")
+@TableName("sys_user")
 public class User {
     @TableId(value = "uid",type = IdType.AUTO)
     private Integer uid;

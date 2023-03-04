@@ -123,8 +123,8 @@
                             <td th:text="${cpc.iof.iofOutaddress}">
                                 <!--流出地点-->
                             </td>
-                            <td th:if="${cpc.iof.iofOutflow != ''}" >已流出</td>
-                            <td th:if="${cpc.iof.iofOutflow == ''}" >已流入</td>
+                            <td th:if="${cpc.iof.iofOutflow != ''}">已流出</td>
+                            <td th:if="${cpc.iof.iofOutflow == ''}">已流入</td>
                             <td>
                                 <!--操作 编辑 和 详情  ajax写-->
                                 <!--<input type="button" value="编辑" id="updateById">-->

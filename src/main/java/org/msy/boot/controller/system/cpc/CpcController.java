@@ -1,10 +1,7 @@
 package org.msy.boot.controller.system.cpc;
 
-import org.msy.boot.entity.Cpc;
 import org.msy.boot.entity.CpcDetail;
 import org.msy.boot.entity.FuzzyQuery;
-import org.msy.boot.entity.Party;
-import org.msy.boot.mapper.PartyMapper;
 import org.msy.boot.service.system.cpc.CpcService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

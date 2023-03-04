@@ -175,22 +175,31 @@
                                         </tr>
                                         <tr th:each="fm,s:${query.familyList}">
                                             <td>
-                                                <input type="hidden" th:value="${fm.faId}" th:name="|familyList[${s.index}].faId|">
-                                                <input type="hidden" th:value="${fm.faCpcid}" th:name="|familyList[${s.index}].faCpcid|">
-                                                <input type="text" th:value="${fm.faRelation}" th:name="|familyList[${s.index}].faRelation|">
+                                                <input type="hidden" th:value="${fm.faId}"
+                                                       th:name="|familyList[${s.index}].faId|">
+                                                <input type="hidden" th:value="${fm.faCpcid}"
+                                                       th:name="|familyList[${s.index}].faCpcid|">
+                                                <input type="text" th:value="${fm.faRelation}"
+                                                       th:name="|familyList[${s.index}].faRelation|">
                                             </td>
-                                            <td><input type="text" th:value="${fm.faName}" th:name="|familyList[${s.index}].faName|">
+                                            <td><input type="text" th:value="${fm.faName}"
+                                                       th:name="|familyList[${s.index}].faName|">
                                             </td>
-                                            <td><input type="text" th:value="${fm.faBirth}" th:name="|familyList[${s.index}].faBirth|">
+                                            <td><input type="text" th:value="${fm.faBirth}"
+                                                       th:name="|familyList[${s.index}].faBirth|">
                                             </td>
                                             <td colspan="2">
-                                                <input type="text" th:value="${fm.faJob}" th:name="|familyList[${s.index}].faJob|">
+                                                <input type="text" th:value="${fm.faJob}"
+                                                       th:name="|familyList[${s.index}].faJob|">
                                             </td>
-                                            <td><input type="text" th:value="${fm.faPost}" th:name="|familyList[${s.index}].faPost|">
+                                            <td><input type="text" th:value="${fm.faPost}"
+                                                       th:name="|familyList[${s.index}].faPost|">
                                             </td>
-                                            <td><input type="text" th:value="${fm.faPhone}" th:name="|familyList[${s.index}].faPhone|">
+                                            <td><input type="text" th:value="${fm.faPhone}"
+                                                       th:name="|familyList[${s.index}].faPhone|">
                                             </td>
-                                            <td><input type="text" th:value="${fm.faOther}" th:name="|familyList[${s.index}].faOther|">
+                                            <td><input type="text" th:value="${fm.faOther}"
+                                                       th:name="|familyList[${s.index}].faOther|">
                                             </td>
                                         </tr>
                                         <tr>

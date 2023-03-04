@@ -4,48 +4,17 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8def4db4-0310-4a2f-80cd-ae20fd3bd890" name="Changes" comment="第二次提交 2023年3月1日下午 17点05分">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/fuzzyqueries/FuzzyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/FuzzyQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/CompanyMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/EduMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/FamilyMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/IofMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/PartyMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/company/CompanyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/company/impl/CompanyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/edu/EduService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/edu/impl/EduServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/family/FamilyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/family/impl/FamilyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/iof/IofService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/iof/impl/IofServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/party/PartyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/party/impl/PartyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cpc/cpcInsert.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cpc/cpcIofManage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/iof/iofDetil.html" afterDir="false" />
+    <list default="true" id="8def4db4-0310-4a2f-80cd-ae20fd3bd890" name="Changes" comment="第三次提交 2023年3月3日下午 16点41分">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/0491f48d-5ec8-4de5-a525-701b4c02f619.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0491f48d-5ec8-4de5-a525-701b4c02f619.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/cpc/CpcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/cpc/CpcController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/cpc/CpcDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/cpc/CpcDetailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Cpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Cpc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/CpcDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/CpcDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Iof.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Iof.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Party.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/CpcDetailMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/CpcDetailMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/CpcMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/CpcMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/cpc/CpcService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/cpc/CpcService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/cpc/impl/CpcServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/cpc/impl/CpcServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/cpcdetail/CpcDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/cpcdetail/CpcDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/cpcdetail/impl/CpcDetailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/cpcdetail/impl/CpcDetailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CpcDetailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CpcDetailMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CpcMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CpcMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cpc/cpcList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cpc/cpcList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cpc/cpcIofManage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cpc/cpcIofManage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cpc/cpcUpdate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cpc/cpcUpdate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/iof/iofDetil.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/iof/iofDetil.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +76,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.breadcrumbs&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;eafb252bf2aef0e2b381caa2afd6287b&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -213,7 +182,10 @@
       <workItem from="1677551307594" duration="27917000" />
       <workItem from="1677631922152" duration="34780000" />
       <workItem from="1677717675380" duration="30130000" />
-      <workItem from="1677803587838" duration="21990000" />
+      <workItem from="1677803587838" duration="24652000" />
+      <workItem from="1677835399314" duration="79000" />
+      <workItem from="1677835498124" duration="3779000" />
+      <workItem from="1677890039583" duration="8334000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交 2023年2月28日上午 10:06">
       <created>1677550986034</created>
@@ -236,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677661560356</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="第三次提交 2023年3月3日下午 16点41分">
+      <created>1677832913313</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677832913313</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +226,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -256,7 +247,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次提交 2023年2月28日上午 10:06" />
     <MESSAGE value="第二次提交 2023年3月1日下午 17点05分" />
-    <option name="LAST_COMMIT_MESSAGE" value="第二次提交 2023年3月1日下午 17点05分" />
+    <MESSAGE value="第三次提交 2023年3月3日下午 16点41分" />
+    <option name="LAST_COMMIT_MESSAGE" value="第三次提交 2023年3月3日下午 16点41分" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -7,7 +7,6 @@ import org.msy.boot.service.system.cpcdetail.CpcDetailService;
 import org.msy.boot.service.system.edu.EduService;
 import org.msy.boot.service.system.family.FamilyService;
 import org.msy.boot.service.system.iof.IofService;
-import org.msy.boot.service.system.party.PartyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,9 +34,6 @@ public class CpcDetailController {
     private IofService iofService;
     @Autowired
     private FamilyService familyService;
-    @Autowired
-    private PartyService partyService;
-
     @GetMapping("/queryById")
     public String queryById(@RequestParam("cpcId") Integer id, Model model) {
         System.out.println(id);
@@ -46,7 +42,6 @@ public class CpcDetailController {
         model.addAttribute("query", list);
         return "/cpc/cpcDetail";
     }
-
     @GetMapping("/updateById")
     public String updateById(@RequestParam("cpcId") Integer id, Model model) {
         System.out.println(id);
@@ -95,18 +90,15 @@ public class CpcDetailController {
     private String goIof() {
         return "cpc/cpcIofManage";
     }
-
     @GetMapping("/insert.html")
     private String goInsert() {
         return "cpc/cpcInsert";
     }
-
     @PostMapping("/insert")
     private String insert(CpcDetail detail) {
         int i = cpcDetailService.insertAll(detail);
         return "redirect:/cpc/list.html";
     }
-
     @GetMapping("/iofUpdateById")
     public String iofUpdateById(@RequestParam("cpcId") Integer id, Model model) {
         CpcDetail list = cpcDetailService.queryById(id);
