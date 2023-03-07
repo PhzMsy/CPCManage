@@ -21,7 +21,7 @@
         from menu
         where pid = 0
           and status = 1
-          and is_deleted = 1
+          and is_deleted = 0
     </select>
 
     <select id="getSubMenu" resultMap="menuMap">
@@ -29,12 +29,12 @@
         from menu
         where pid = #{mid}
           and status = 1
-          and is_deleted = 1
+          and is_deleted = 0
     </select>
     <select id="getMenuList" parameterType="org.msy.boot.entity.Page" resultType="org.msy.boot.entity.Menu">
         select mid,m_name,pid,status,p_name,href
         from menu
-        where is_deleted = 1
+        where is_deleted = 0
         <if test="t.mName != null">
             and m_name like '%${t.mName}%'
         </if>
@@ -42,7 +42,7 @@
     </select>
 
     <select id="getCount" parameterType="org.msy.boot.entity.Menu" resultType="java.lang.Integer">
-        select count(1) from menu where is_deleted = 1
+        select count(1) from menu where is_deleted = 0
         <if test="mName != null">
             and m_name like '%${mName}%'
         </if>
@@ -51,13 +51,13 @@
     <!-- 逻辑删除菜单信息 -->
     <update id="deleteMenu" parameterType="int">
         update menu
-        set is_deleted = 0
+        set is_deleted = 1
         where mid = #{mid}
     </update>
 
     <!-- 批量逻辑删除 -->
     <update id="deleteBatchMenu" parameterType="string">
-        update menu set is_deleted = 0
+        update menu set is_deleted = 1
         where mid in (${check})
     </update>
     <!-- 更新操作 -->

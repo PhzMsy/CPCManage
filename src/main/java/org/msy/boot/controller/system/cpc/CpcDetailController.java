@@ -75,7 +75,7 @@ public class CpcDetailController {
 
     @PostMapping("/iofUpdateDetail")
     private String iofUpdateDetail(CpcDetail detail) {
-        System.out.println(detail);
+        System.out.println("流入流出数据:"+detail);
         Cpc cpc = detail.getCpc();
         Party cpcParid = detail.getCpcParid();
         Iof iof = detail.getIof();
@@ -84,7 +84,7 @@ public class CpcDetailController {
         Integer cpcId = detail.getCpcId();
         cpcDetailService.updateAllParty(cpcParid, cpcId); //更改detail表中的party字段
         iofService.updateAllIof(iof);
-        return "redirect:/CpcDetail/cpcIofManage.html";
+        return "redirect:/cpc/ioflist.html";
     }
     @GetMapping("/cpcIofManage.html")
     private String goIof() {

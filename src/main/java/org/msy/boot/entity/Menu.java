@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Data
 @TableName("menu")
-public class Menu {
+public class Menu extends BaseEntity{
 
     // ASSIGN_ID -> 19位的主键
 //    @TableId(type = IdType.ASSIGN_ID)

@@ -42,12 +42,19 @@ public class CpcServiceImpl extends ServiceImpl<CpcMapper, Cpc> implements CpcSe
 
     @Override
     public List<CpcDetail> fuzzyQuery(FuzzyQuery fuzzyQuery) {
+        QueryWrapper<Party> partyQueryWrapper = new QueryWrapper<>();
+
         List<CpcDetail> list = new ArrayList<>();
-        Date startDate = fuzzyQuery.getStartDate();
-        Date endDate = fuzzyQuery.getEndDate();
+        String startDate = fuzzyQuery.getStartDate();
+        String endDate = fuzzyQuery.getEndDate();
+        if (startDate!=null){
+            partyQueryWrapper.ge("start_date",startDate);
+        }
+        if (endDate!=null){
+            partyQueryWrapper.ge("end_date",endDate);
+        }
 
         if (fuzzyQuery.getFuzzyParty() != null && !fuzzyQuery.getFuzzyParty().equals("")) {
-            QueryWrapper<Party> partyQueryWrapper = new QueryWrapper<>();
             partyQueryWrapper.select("par_id").like("par_name", fuzzyQuery.getFuzzyParty());
             List<Party> parties = partyMapper.selectList(partyQueryWrapper);
             for (Party party : parties) {

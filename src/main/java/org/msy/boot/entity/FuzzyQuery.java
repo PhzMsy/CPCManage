@@ -23,8 +23,8 @@ public class FuzzyQuery {
     private String fuzzyCpcWorkType;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(timezone = "GMT+8",pattern = "yyyy-MM-dd")
-    private Date startDate;
+    private String startDate;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(timezone = "GMT+8",pattern = "yyyy-MM-dd")
-    private Date endDate;
+    private String endDate;
 }

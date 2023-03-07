@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <button id="batchDelete" onclick="batchDelete()" class="btn btnoutline btn-danger">批量删除</button>
+            <button id="batchDelete" onclick="batchDelete()" class="btn btnoutline btn-danger">批量恢复</button>
+        </td>
+    </tr>
+</table>
+<table id="table" class="table table-bordered">
+    <thead>
+    <tr>
+        <th><input id="checkAll" type="checkbox" onclick="checkAll()"></th>
+        <th>序号</th>
+        <th>源</th>
+        <th>键</th>
+        <th>标记</th>
+        <th>删除时间</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item,index : ${gcList}">
+        <td><input type="checkbox"></td>
+        <td th:text="${index.count}"></td>
+        <td th:text="${item.from_table}"></td>
+        <td th:text="${item.primary_key}"></td>
+        <td th:text="${item.title}"></td>
+        <td th:text="${item.delete_time}"></td>
+        <td>
+            <a th:href="@{/gc/deleteData?uid=}+${item.uid}+'&ft='+${item.from_table} +'&pk=' + ${item.primary_key}">永久删除</a>
+            <a th:href="@{/gc/recover?uid=}+${item.uid}+'&ft='+${item.from_table} + '&pk=' ${item.primary_key}">恢复</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

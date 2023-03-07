@@ -94,51 +94,38 @@
                                 <input type="checkbox">
                             </th>
                             <th>序号</th>
+                            <th>登陆账号</th>
                             <th>姓名</th>
-                            <th>身份证号</th>
-                            <th>性别</th>
-                            <th>民族</th>
-                            <th>联系电话</th>
-                            <th>户籍所在地</th>
-                            <th>隶属管理支部</th>
-                            <th>当前工作状态</th>
-                            <th>流入日期</th>
+                            <th>联系方式</th>
+                            <th>所属组织名称</th>
+                            <th>状态</th>
+                            <th>创建时间</th>
                             <th>操作</th>
+
                         </tr>
                         </thead>
                         <tbody>
-                        <tr th:each="cpc,cpc1:${cpcList}">
+                        <tr th:each="cus:${list}">
                             <td>
                                 <input type="checkbox">
                             </td>
-                            <td th:text="${cpc.cpcId}">
+                            <td th:text="${cus.id}">
                             </td>
-                            <td th:text="${cpc.cpc.cpcName}">
+                            <td th:text="${cus.name}">
                             </td>
-                            <td th:text="${cpc.cpc.cpcIdCard}">
+                            <td th:text="${cus.phone}">
                             </td>
-                            <td th:text="${cpc.cpc.cpcSex}">
+                            <td th:text="${cus.parid}">
                             </td>
-                            <td th:text="${cpc.cpc.cpcNation}">
-                            </td>
-                            <td th:text="${cpc.cpc.cpcPhone}">
-                            </td>
-                            <td th:text="${cpc.cpc.cpcOrigin}">
-                            </td>
-                            <td th:text="${cpc.cpcParid.parName}">
-                                <!--隶属支部-->
-                            </td>
-                            <td th:text="${cpc.cpc.cpcWorktype}">
-                                <!--当前工作状态-->
-                            </td>
-                            <td th:text="${cpc.iof.iofInflow}">
-                                <!--流入日期-->
-                            </td>
+                            <td th:text="${cus.status}">
+                        </td><td th:text="${cus.creatTime}">
+                        </td>
+
                             <td>
                                 <!--操作 编辑 和 详情  ajax写-->
                                 <!--<input type="button" value="编辑" id="updateById">-->
-                                <a th:href="@{/CpcDetail/updateById(cpcId=${cpc.cpcId})}">编辑</a>
-                                <a th:href="@{/CpcDetail/queryById(cpcId=${cpc.cpcId})}">详情</a>
+                                <a th:href="@{/custom/updateById(id=${cus.id})}">编辑</a>
+                                <a th:href="@{/custom/queryById(id=${cus.id})}">详情</a>
                                 <!--<input type="button" value="详情" id="queryById">-->
                             </td>
                         </tr>

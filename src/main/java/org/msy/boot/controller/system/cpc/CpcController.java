@@ -18,7 +18,7 @@ import java.util.List;
 @RequestMapping("/cpc")
 public class CpcController {
 
-    @Autowired
+    @Autowired //首先根据cpcService名字去找 找不到才根据属性名去找
     private CpcService cpcService;
 
     @RequestMapping("/list.html")

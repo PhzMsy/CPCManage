@@ -77,6 +77,7 @@
         from cpc c
                  join cpc_detail cd on c.cpc_id = cd.cpc_id
 
+
     </select>
 
     <select id="queryByComp" resultType="company">

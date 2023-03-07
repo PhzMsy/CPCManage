@@ -44,7 +44,7 @@
                 </div>
               </div>
               <div class="ibox-content">
-                <form th:action="@{/CpcDetail/updateDetail}" method="post">
+                <form th:action="@{/CpcDetail/iofUpdateDetail}" method="post">
                   <table class="table table-bordered">
                     <tr>
                       <td colspan="1" rowspan="3">图片占位</td>
@@ -135,6 +135,7 @@
                       <td colspan="2"><input type="text" name="cpcStrengt"
                                              th:value="${query.cpcStrengt}"></td>
                     </tr>
+                  </table>
                   <p style="text-align: center">党员流出管理</p>
                   <table class="table table-bordered">
                     <tr>

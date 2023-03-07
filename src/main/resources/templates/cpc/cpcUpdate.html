@@ -139,7 +139,7 @@
                                         </tr>
                                         <tr>
                                             <td rowspan="2">学历信息</td>
-                                            <td>学历(全日制):</td>
+                                            <td>学历(全日制):</td>hj
                                             <td><input type="text" name="edu.eduEdu" th:value="${query.edu.eduEdu}"
                                                        required>
                                             </td>
@@ -370,24 +370,24 @@
                                     <table class="table table-bordered">
                                         <tr>
                                             <td>流入时间</td>
-                                            <td colspan="2"><input type="text" name="iof.iofInflow"
-                                                                   th:value="${query.iof.iofInflow}"></td>
+                                            <td colspan="2"><input type="text"
+                                                                   th:value="${#dates.format(query.iof.iofInflow,'yyyy-MM-dd')}"></td>
                                             <td>流入地点</td>
                                             <td colspan="2">暂无</td>
                                             <td>纳入流动党委管<br>理时间</td>
                                             <td colspan="2"><input type="text" name="iof.iofInflow"
-                                                                   th:value="${query.iof.iofInflow}"></td>
+                                                                   th:value="${#dates.format(query.iof.iofInflow,'yyyy-MM-dd')}"></td>
                                         </tr>
                                         <tr>
                                             <td>纳入党支部</td>
                                             <td colspan="2"><input type="text" name="iof.iofJoinparty"
-                                                                   th:value="${query.iof.iofJoinparty}"></td>
+                                                                   th:value="${#dates.format(query.iof.iofJoinparty,'yyyy-MM-dd')}"></td>
                                             <td>在济南支部所在<br>党委</td>
                                             <td colspan="2"><input type="text"
                                                                    th:value="${query.cpcParid.parName}"></td>
                                             <td>流出济南时间</td>
                                             <td colspan="2"><input type="text" name="iof.iofOutflow"
-                                                                   th:value="${query.iof.iofOutflow}"></td>
+                                                                   th:value="${#dates.format(query.iof.iofOutflow,'yyyy-MM-dd')}"></td>
                                         </tr>
                                         <tr>
                                             <td>流出地点</td>

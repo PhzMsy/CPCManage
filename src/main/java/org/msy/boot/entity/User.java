@@ -10,13 +10,15 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("sys_user")
-public class User {
+@TableName("_user")
+public class User extends BaseEntity{
     @TableId(value = "uid",type = IdType.AUTO)
     private Integer uid;
     private String username;
     private String password;
-    private String usertype;
-    private String ename;
+    private Integer usertype;
+    private Integer rid;
+    private Integer status;
+
 
 }

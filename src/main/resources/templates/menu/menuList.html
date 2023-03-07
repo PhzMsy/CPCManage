@@ -52,8 +52,8 @@
         </td>
         <td th:text="${menu.href}"></td>
         <td>
-            <a th:href="@{/menu/menuUpdate.html?mid=} + ${menu.mid}" class="btn btn-outline btn-success">更新</a>
-            <a th:href="@{/menu/delete?mid=} + ${menu.mid}" class="btn btn-outline btn-danger">删除</a>
+            <a th:href="|@{/menu/menuUpdate.html?mid=}${menu.mid}|" class="btn btn-outline btn-success">更新</a>
+            <a th:href="|@{/menu/delete?mid=}${menu.mid}|" class="btn btn-outline btn-danger">删除</a>
         </td>
     </tr>
     </tbody>

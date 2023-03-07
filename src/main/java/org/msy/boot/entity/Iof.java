@@ -18,12 +18,12 @@ import java.sql.Date;
 public class Iof {
     @TableId(value = "iof_id",type = IdType.AUTO)
     private Integer iofId;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+//    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(timezone = "GMT+8",pattern = "yyyy-MM-dd")
-    private Date iofInflow;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private String iofInflow;
+//    @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(timezone = "GMT+8",pattern = "yyyy-MM-dd")
-    private Date iofOutflow;
+    private String iofOutflow;
     private String iofOutaddress;
     private String iofJoinparty;
     private String iofManage;
