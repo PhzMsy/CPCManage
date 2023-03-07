@@ -4,49 +4,32 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8def4db4-0310-4a2f-80cd-ae20fd3bd890" name="Changes" comment="第四次提交 2023年3月3日下午 16点41分">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/config/MPConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/customer/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/gc/GcController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Gc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/handle/DefaultValueHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/CustomerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/GcMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/customer/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/customer/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/gc/GcService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/gc/impl/GcServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/GcMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/my.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customer/customerDetail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customer/customerList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customer/customerUpdate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/system.gc/gcList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/user/addOrUpdate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0491f48d-5ec8-4de5-a525-701b4c02f619.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0491f48d-5ec8-4de5-a525-701b4c02f619.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8def4db4-0310-4a2f-80cd-ae20fd3bd890" name="Changes" comment="第五次提交 2023年3月7日下午 19点48分">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/Importandexport/ImportAndExport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/role/RoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/ExportMouldDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Power.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/RoleVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/RoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/role/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/role/impl/RoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/util/BigIntegerUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/util/DateUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/util/JSONUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/util/MathUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/RoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/role/roleList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/cpc/CpcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/cpc/CpcController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/fuzzyqueries/FuzzyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/fuzzyqueries/FuzzyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/cpc/CpcDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/cpc/CpcDetailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/user/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/FuzzyQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/FuzzyQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Cpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Cpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/CpcDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/CpcDetail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Iof.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Iof.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/cpc/impl/CpcServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/cpc/impl/CpcServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/user/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/user/Impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CpcMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CpcMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MeauMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/MeauMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cpc/cpcList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cpc/cpcList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cpc/cpcUpdate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cpc/cpcUpdate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/iof/iofDetil.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/iof/iofDetil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/menu/menuList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu/menuList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/userList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/userList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Party.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/customer/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/customer/impl/CustomerServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,10 +39,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Mapper" />
-        <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
+        <option value="Interface" />
+        <option value="Mapper" />
       </list>
     </option>
   </component>
@@ -102,13 +85,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "F:/Cpc/CPCManage/src/main/java/org/msy/boot/entity",
+    "last_opened_file_path": "F:/Cpc/CPCManage/src/main/java/org/msy/boot/util",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "project.propCompiler",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "spring.configuration.checksum": "eafb252bf2aef0e2b381caa2afd6287b",
     "vue.rearranger.settings.migration": "true"
   },
@@ -119,7 +102,11 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.msy.boot.entity" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Cpc\CPCManage\src\main\java\org\msy\boot\util" />
       <recent name="F:\Cpc\CPCManage\src\main\resources\templates" />
       <recent name="F:\Cpc\CPCManage\src\main\resources\static" />
       <recent name="F:\Cpc\CPCManage\src\main\resources" />
@@ -220,7 +207,8 @@
       <workItem from="1677890039583" duration="14890000" />
       <workItem from="1678062889827" duration="8780000" />
       <workItem from="1678082682988" duration="17670000" />
-      <workItem from="1678149663017" duration="25280000" />
+      <workItem from="1678149663017" duration="27932000" />
+      <workItem from="1678235815275" duration="15773000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交 2023年2月28日上午 10:06">
       <created>1677550986034</created>
@@ -257,11 +245,29 @@
       <option name="project" value="LOCAL" />
       <updated>1677901781082</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="第五次提交 2023年3月7日下午 19点48分">
+      <created>1678189727980</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678189727980</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -291,7 +297,8 @@
     <MESSAGE value="第二次提交 2023年3月1日下午 17点05分" />
     <MESSAGE value="第三次提交 2023年3月3日下午 16点41分" />
     <MESSAGE value="第四次提交 2023年3月3日下午 16点41分" />
-    <option name="LAST_COMMIT_MESSAGE" value="第四次提交 2023年3月3日下午 16点41分" />
+    <MESSAGE value="第五次提交 2023年3月7日下午 19点48分" />
+    <option name="LAST_COMMIT_MESSAGE" value="第五次提交 2023年3月7日下午 19点48分" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

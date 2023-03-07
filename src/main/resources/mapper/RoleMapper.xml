@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.msy.boot.mapper.RoleMapper">
+
+
+    <select id="findPower" parameterType="integer" resultType="java.util.Map">
+        select r.rid, p.pid, p.menu_power
+        from sys_role r
+                 left join sys_power p on r.pid = p.pid
+        where r.rid = #{rid}
+    </select>
+    <!--
+useGeneratedKeys="true" ： 打开插入数据后 返回插入的数据的主键 的功能
+keyProperty="pid" ： 返回的主键key为pid
+-->
+    <insert id="saveNewPower" parameterType="map" useGeneratedKeys="true"
+            keyProperty="pid">
+        insert into sys_power(menu_power) values (#{menu_power})
+    </insert>
+    <update id="savePower" parameterType="map">
+        update sys_power p
+            left join sys_role r
+            on p.pid = r.pid
+        set p.menu_power = #{menu_power}
+        where r.rid = #{rid}
+    </update>
+    <select id="findPowerByRid" parameterType="int" resultType="int">
+        select count(*) from (
+                                 select r.rid as rid, p.pid from sys_role r
+                                                                     join sys_power p on r.pid = p.pid
+                             ) t
+        where t.rid = #{rid}
+    </select>
+
+</mapper>

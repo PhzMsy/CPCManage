@@ -25,6 +25,8 @@ public class Menu extends BaseEntity{
     private Integer status;
     private String href ;
 
+    private boolean checked;
+
     @TableField("p_name")
     private String pName;
 

@@ -34,6 +34,13 @@ public class CpcDetailController {
     private IofService iofService;
     @Autowired
     private FamilyService familyService;
+
+    /**
+     * 根据id查询 做回显使用
+     * @param id
+     * @param model
+     * @return
+     */
     @GetMapping("/queryById")
     public String queryById(@RequestParam("cpcId") Integer id, Model model) {
         System.out.println(id);
@@ -42,6 +49,13 @@ public class CpcDetailController {
         model.addAttribute("query", list);
         return "/cpc/cpcDetail";
     }
+
+    /**
+     * 修改页面根据id查询做回显
+     * @param id
+     * @param model
+     * @return
+     */
     @GetMapping("/updateById")
     public String updateById(@RequestParam("cpcId") Integer id, Model model) {
         System.out.println(id);
@@ -51,6 +65,11 @@ public class CpcDetailController {
         return "/cpc/cpcUpdate";
     }
 
+    /**
+     * 修改提交来的数据
+     * @param detail
+     * @return
+     */
     @PostMapping("/updateDetail")
     private String updateDetail(CpcDetail detail) {
         System.out.println(detail);
@@ -73,6 +92,11 @@ public class CpcDetailController {
         return "redirect:/cpc/list.html";
     }
 
+    /**
+     * 流入流出管理 中的修改详情
+     * @param detail
+     * @return
+     */
     @PostMapping("/iofUpdateDetail")
     private String iofUpdateDetail(CpcDetail detail) {
         System.out.println("流入流出数据:"+detail);
@@ -86,6 +110,11 @@ public class CpcDetailController {
         iofService.updateAllIof(iof);
         return "redirect:/cpc/ioflist.html";
     }
+
+    /**
+     * 流入流出页面跳转
+     * @return
+     */
     @GetMapping("/cpcIofManage.html")
     private String goIof() {
         return "cpc/cpcIofManage";

@@ -1,5 +1,6 @@
 package org.msy.boot.entity;
 
+import com.alibaba.excel.annotation.ExcelProperty;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -27,13 +28,16 @@ public class Cpc {
     private Integer cpcId;
     @NotNull
     private String cpcName;
+    @ExcelProperty(value = "籍贯")
     private String cpcOrigin;
-
+    @ExcelProperty(value = "性别")
     private String cpcSex;
-    private String cpcNation;
+
+    @ExcelProperty(value = "身份证号")
     @TableField("cpc_idcard")
     private String cpcIdCard;
     private String cpcPhone;
+    @ExcelProperty(value = "当前工作状态")
     private String cpcWorktype;
 
 }

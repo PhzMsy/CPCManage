@@ -1,5 +1,7 @@
 package org.msy.boot.entity;
 
+import com.alibaba.excel.annotation.ExcelProperty;
+import com.alibaba.excel.converters.longconverter.LongStringConverter;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -22,9 +24,9 @@ import java.util.List;
 @NoArgsConstructor
 @TableName("cpc_detail")
 public class CpcDetail {
+    @ExcelProperty(value = "序号",index = 0,converter = LongStringConverter.class)
     @TableId(value = "cpc_id",type = IdType.AUTO)
     private Integer cpcId;
-
     private String cpcCname;
     private Date cpcBirth;
 /*
@@ -48,7 +50,7 @@ public class CpcDetail {
     private Company cpcComid;
     @TableField(exist = false)
     private Party cpcParid;
-    @TableField(exist = false)
+    @TableField(exist = false)  
     private List<Family> familyList;
     @TableField(exist = false)
     private Edu edu;

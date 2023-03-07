@@ -1,5 +1,6 @@
 package org.msy.boot.entity;
 
+import com.alibaba.excel.annotation.ExcelProperty;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -19,6 +20,7 @@ import lombok.NoArgsConstructor;
 public class Party {
     @TableId(value = "par_id",type = IdType.AUTO)
     private Integer parId;
+    @ExcelProperty(value = "隶属管理支部")
     private String parName;
     private String parPid;
 }

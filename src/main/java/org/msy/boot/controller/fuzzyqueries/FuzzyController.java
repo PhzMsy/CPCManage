@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/fuzzy")
 public class FuzzyController {
-
+    /**
+     * 没用到此处的模糊查询
+     * @return
+     */
     @RequestMapping("/fuzzyQuery")
     public String query() {
 
