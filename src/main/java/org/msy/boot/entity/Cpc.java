@@ -32,7 +32,7 @@ public class Cpc {
     private String cpcOrigin;
     @ExcelProperty(value = "性别")
     private String cpcSex;
-
+    private String cpcNation;
     @ExcelProperty(value = "身份证号")
     @TableField("cpc_idcard")
     private String cpcIdCard;

@@ -4,32 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8def4db4-0310-4a2f-80cd-ae20fd3bd890" name="Changes" comment="第五次提交 2023年3月7日下午 19点48分">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/Importandexport/ImportAndExport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/role/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/ExportMouldDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Power.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/RoleVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/mapper/RoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/role/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/role/impl/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/util/BigIntegerUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/util/DateUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/util/JSONUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/util/MathUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/RoleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/role/roleList.html" afterDir="false" />
+    <list default="true" id="8def4db4-0310-4a2f-80cd-ae20fd3bd890" name="Changes" comment="第六次提交 2023年3月8日下午 16点34分&#10;用户-角色-权限">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/fuzzyqueries/FuzzyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/fuzzyqueries/FuzzyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/cpc/CpcDetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/controller/system/cpc/CpcDetailController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Cpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Cpc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/CpcDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/CpcDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Iof.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Iof.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/entity/Party.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/customer/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/msy/boot/service/system/customer/impl/CustomerServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,33 +51,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "F:/Cpc/CPCManage/src/main/java/org/msy/boot/util",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "eafb252bf2aef0e2b381caa2afd6287b",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Cpc/CPCManage/src/main/java/org/msy/boot/util&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;eafb252bf2aef0e2b381caa2afd6287b&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.msy.boot.entity" />
